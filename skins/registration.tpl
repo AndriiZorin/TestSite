@@ -1,4 +1,4 @@
-	<div class="account">
+	<div class="registration">
 		<h3>Регистрация на LoveStory</h3>
 		<form action="" method="post">
 			<table>

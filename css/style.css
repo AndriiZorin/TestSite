@@ -74,11 +74,7 @@ body {
 	font-size:35px;
 	font-style: italic;
 }
-
-.home #tagline {
-	font-size:12px;
-}
-.account {
+.registration {
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 30px;
@@ -87,29 +83,24 @@ body {
 	border: 4px double black;
 	width: 20%;
 }
-.account #form_text {
+.registration #form_text {
 	text-align: right;
 }
-.account h3 {
+.registration h3 {
 	text-align: center;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
-.account #submit {
+.registration #submit {
 	text-align: center;
 	margin: 5px;
 }
-.account #required_field {
+.registration #required_field {
 	padding-top: 5px;
 	font-size: 10px;
 	text-align: center;
 }
-.newpage {
-	text-align: center;
-	margin-top: 100px;
-	margin-bottom: 100px;
-	font-size: 25px;
-}
-.review_all {
+
+.review_before_block {
 	margin: 10px;
 	margin-left: 100px;
 	font-size: Verdana, Arial, Helvetica, sans-serif;
@@ -161,6 +152,14 @@ body {
 	font-size: 10px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+
+.created {
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	font-size: 25px;
 }
 
 #redtext {

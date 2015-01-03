@@ -1,4 +1,4 @@
-<div class="review_all">Отзывов на странице: <?php echo mysqli_num_rows($review) ?></div>
+<div class="review_before_block">Отзывов на странице: <?php echo mysqli_num_rows($review) ?></div>
 
 <?php if(mysqli_num_rows($review)) {
      while  ($row = mysqli_fetch_assoc($review)) {
@@ -7,7 +7,7 @@
 	<div id="title">
 		<h4>
 			- <?php  echo htmlspecialchars($row['username']); ?>  
-			<span id="time"><?php  echo $row['time']; ?></span>
+			<span id="time"><?php  echo $row['date']; ?></span>
 		</h4>
 	</div>
 	<div id="content">
@@ -35,6 +35,6 @@
 				<td><span id="redtext"><?php echo @$error_review; ?></span></td>
 			</tr>
 		</table>
-		<div id="submit"><input type="submit" name="revsubmit" value="Send review"></div>
+		<div id="submit"><input type="submit" name="revsubmit" value="Отправить отзыв"></div>
 	</form>
 </div>

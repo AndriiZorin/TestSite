@@ -4,18 +4,18 @@
 			//Проверка на заполнение полей
 			$errors = array ();
 			if(empty($_POST['login'])) {
-				$errors['login'] = "field 'login' is empty";
+				$errors['login'] = "поел 'login' пустое!";
 			}
 			if(empty($_POST['password'])) {
-				$errors['password'] = "field 'password' is empty";
+				$errors['password'] = "поле 'пароль' пустое!";
 			}
 			if(empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-				$errors['email'] = "field 'email' is empty";
+				$errors['email'] = "поле 'email' пустое!";
 			}
 			//Заносим пользователья в БД
 			if (!count($errors)) {
 				mysqli_query($link,
-					"INSERT INTO `users` SET
+					"INSERT INTO `user` SET
 					`login` = '".mysqli_real_escape_string($link, $_POST['login'])."',
 					`password` = '".mysqli_real_escape_string($link, $_POST['password'])."',
 					`email` = '".mysqli_real_escape_string($link, $_POST['email'])."',
@@ -23,7 +23,7 @@
 				") or exit(mysqli_error($link));
 				//Перенапрпавление в случае удачной регистрации
 				$_SESSION['reg'] = 'OK';
-	 			header("Location: index.php?page=account_created");
+	 			header("Location: index.php?page=registration_created");
 				exit();
 			}
 		}

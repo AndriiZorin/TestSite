@@ -7,7 +7,7 @@
 
 <body>
 <div class="header">
-	<div id="login"><a href="index.php?page=account">Создать акаунт</a></div>
+	<div id="login"><a href="index.php?page=registration">Создать акаунт</a></div>
 	<div id="center"> 
 		<div id="image"></div>  
 		<div class="navigation"> 
