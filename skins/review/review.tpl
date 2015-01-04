@@ -3,15 +3,15 @@
 <?php if(mysqli_num_rows($review)) {
      while  ($row = mysqli_fetch_assoc($review)) {
  ?>
-<div class="review_block">
+<div class="review">
 	<div id="title">
 		<h4>
-			- <?php  echo htmlspecialchars($row['username']); ?>  
-			<span id="time"><?php  echo $row['date']; ?></span>
+			 <?php  echo htmlspecialchars($row['username']); ?>  
+			<span id="date"><?php  echo $row['date']; ?></span>
 		</h4>
 	</div>
-	<div id="content">
-		<?php echo htmlspecialchars($row['review']);; ?>
+	<div id="text">
+		<?php echo htmlspecialchars($row['review']); ?>
 	</div>
 </div>
 <?php  

@@ -22,7 +22,7 @@
 				") or exit(mysqli_error($link));	
 			}	
 			$_SESSION['rev'] = "OK";
-			header("Location: index.php?page=review_added");
+			header("Location: index.php?module=review&page=review_added");
 			exit();
 		}  else {
 			$error_review = "Review-message is empty!";

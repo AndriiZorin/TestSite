@@ -23,8 +23,9 @@
 				") or exit(mysqli_error($link));
 				//Перенапрпавление в случае удачной регистрации
 				$_SESSION['reg'] = 'OK';
-	 			header("Location: index.php?page=registration_created");
+	 			header("Location: index.php?module=registration&page=registration_created");
 				exit();
 			}
 		}
 	} 
+?>

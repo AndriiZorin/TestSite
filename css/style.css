@@ -35,7 +35,7 @@ body {
 	margin-right: 30px;
 }	
 .navigation {
-	float:right;
+	float: right;
 	margin-top: 140px; 
 }
 .navigation #navigation_button {
@@ -43,14 +43,14 @@ body {
 	margin-left:40px;
 	text-align:center;
 	float:left;
-	background-image: url(../images/42.gif);
+	background-image: url(../images/navigation_button.jpg);
 	background-position: center;
 }
 .navigation #navigation_button a {
 	font-size:20px;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	text-decoration: blink;
 	color: #111;
+	text-decoration: none;
 }
 .content {
 	width: 100%;
@@ -105,21 +105,23 @@ body {
 	margin-left: 100px;
 	font-size: Verdana, Arial, Helvetica, sans-serif;
 }
-.review_block {
+.review {
 	border: 2px groove black;
 	margin-left: 100px;
 	margin-right: 100px;
 	background-color: #eee;
+	margin-bottom: 15px;
 }
-.review_block #title {
+.review #title {
+	margin-left: 10px;
 	margin-bottom: -15px;
 	font-size: 14px;
 }
-.review_block #time {
+.review #date {
 	color: #555;
 	margin-left: 10px;
 }
-.review_block #content {
+.review #text {
 	padding: 5px;
 	padding-left: 20px;
 	font-size: Verdana, Arial, Helvetica, sans-serif;
@@ -141,6 +143,39 @@ body {
 	text-align: center;
 }
 
+.story {
+	margin: 40px;
+}
+.story_block {
+	border: 1px solid black;
+	border-radius: 20px;
+	margin-bottom: 20px;
+}
+.story_block #title {
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: -30px;
+}
+.story_block #text {
+	padding: 50px;
+	font-size: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.story #button_add {
+	margin-bottom: 10px;
+	width: 200px; 
+	height: 50px;
+	border: 1px solid white;
+	border-radius: 15px;
+	text-align: center;
+	background-image: url(../images/story_button_add.jpg);
+}
+
+.story #button_add a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-decoration: none;
+}
 .footer_bar {
 	width:100%;
 	height:100px;

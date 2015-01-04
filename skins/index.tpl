@@ -7,23 +7,22 @@
 
 <body>
 <div class="header">
-	<div id="login"><a href="index.php?page=registration">Создать акаунт</a></div>
+	<div id="login"><a href="index.php?module=registration&page=registration">Создать акаунт</a></div>
 	<div id="center"> 
 		<div id="image"></div>  
 		<div class="navigation"> 
-			<div id="navigation_button"><a href="index.php?page=home">Главная</a></div>
-			<div id="navigation_button"><a href="index.php?page=story">Истории</a></div>
-			<div id="navigation_button"><a href="index.php?page=review">Отзывы<a></div>
+			<div id="navigation_button"><a href="index.php?module=home&page=home">Главная</a></div>
+			<div id="navigation_button"><a href="index.php?module=story&page=story">Истории</a></div>
+			<div id="navigation_button"><a href="index.php?module=review&page=review">Отзывы<a></div>
 		</div>
 	</div> 
 
 </div>	
 <div class="content">
-	<?php 	include $_GET['page'].'.tpl'; //Переключение между страницами?>	 
+	<?php 	include $_GET['module'].'/'.$_GET['page'].'.tpl'; //Переключение между страницами?>	 
 </div>   
 <div class="footer"> 
 	<div class="footer_bar">
-	
 	</div>
 	<div class="footer_copyright">
 		<?php //copyright
@@ -32,8 +31,7 @@
 			} else {
 				echo "&copy; ".COPYRIGHT ." - ".CURRENTYEAR." Андрей Зорин";
 			}
-		 ?>
-		
+		 ?>	
 	</div>
 </div>
 </body>
