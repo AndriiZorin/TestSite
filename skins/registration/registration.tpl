@@ -4,7 +4,7 @@
 			<table>
 				<tr>
 					<td id="form_text">Логин *</td>
-					<td><input type="text" name="login" value="<?php echo @htmlspecialchars($_POST['login']); ?>"></td>
+					<td><input type="text" name="login" value="<?php echo @htmlspecialchars($_POST['login']); //Зашита от символов?>"></td>
 				</tr>
 				<tr>
 					<td></td>
@@ -28,7 +28,7 @@
 				</tr>
 				<tr>
 					<td id="form_text">Возраст  </td>
-					<td><input type="text" name="age" value="<?php if (isset($_POST['age'])) {echo @($_POST['age']);} //Предовращение XCC-атаки?>"></td>
+					<td><input type="text" name="age" value="<?php if (isset($_POST['age'])) {echo @($_POST['age']);} //Вывод возрасста, если он существует?>"></td>
 				</tr>
 			</table>
 			<div id="submit"><input type="submit" name="submit" value="Создать акаунт"></div>

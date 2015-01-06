@@ -13,6 +13,10 @@
 			<td>История</td>
 			<td><textarea rows="10" cols="50" name="text"></textarea></td>
 		</tr>
+		<tr>
+			<td></td>
+			<td><span id="redtext"><?php echo @$error_story ?></span></td>
+		</tr>
 	</table>
 	<div id="submit"><input type="submit" name="submit_story_add" value="Добавить историю"></div>
 	</form>

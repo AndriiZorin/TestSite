@@ -1,6 +1,6 @@
 <?php
 	if(isset($_POST['submit']) && !empty($_POST['submit'])) {
-		if (isset($_POST['email'], $_POST['login'], $_POST['password'])) {
+		if (isset($_POST['email'], $_POST['login'], $_POST['password'], $_POST['submit'])) {
 			//Проверка на заполнение полей
 			$errors = array ();
 			if(empty($_POST['login'])) {
@@ -16,13 +16,13 @@
 			if (!count($errors)) {
 				mysqli_query($link,
 					"INSERT INTO `user` SET
-					`login` = '".mysqli_real_escape_string($link, $_POST['login'])."',
+					`login`    = '".mysqli_real_escape_string($link, $_POST['login'])."',
 					`password` = '".mysqli_real_escape_string($link, $_POST['password'])."',
-					`email` = '".mysqli_real_escape_string($link, $_POST['email'])."',
-					`age` = '".(int)$_POST['age']."'
+					`email`    = '".mysqli_real_escape_string($link, $_POST['email'])."',
+					`age` 	   = '".(int)$_POST['age']."'
 				") or exit(mysqli_error($link));
 				//Перенапрпавление в случае удачной регистрации
-				$_SESSION['reg'] = 'OK';
+				$_SESSION['reg'] = 'Ваш акаунт успешно создан!';
 	 			header("Location: index.php?module=registration&page=registration_created");
 				exit();
 			}

@@ -1,2 +1,9 @@
-<?php unset($_SESSION['reg']); ?>
-<div class="created">Ваш акаунт был успешно создан!</div>
+<?php 
+	if (isset($_SESSION['reg'])) {
+		$reg = $_SESSION['reg'];
+		unset($_SESSION['reg']);
+	} else {
+		$reg = 'Произошла ошибка, попробуйсте еще раз!';
+	}
+?>
+<div class="created"><?php echo $reg; ?></div>

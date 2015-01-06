@@ -64,7 +64,7 @@ body {
 	height:400px;
 	margin-bottom: -100px;
 	background-attachment: scroll;
-	background-image: url(../images/Untitled-4.png);
+	background-image: url(../images/home.jpg);
 	background-repeat: no-repeat;
 	background-position: right center;
 }
@@ -144,23 +144,40 @@ body {
 }
 
 .story {
-	margin: 40px;
+	margin-top: 40px;
+	margin-right: 40px;
+	margin-left: 40px;
 }
 .story_block {
 	border: 1px solid black;
 	border-radius: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
+
 .story_block #title {
 	text-align: center;
 	font-size: 14px;
-	margin-bottom: -30px;
+	padding-bottom: 30px;
 }
 .story_block #text {
-	padding: 50px;
+	padding-bottom: 50px;
+	padding-right: 50px;
+	padding-left: 50px;
 	font-size: Verdana, Arial, Helvetica, sans-serif;
 }
-
+.story_block #button_delete {
+	width: 170px;
+	float: right;
+	text-align: center;
+	background-position: center;
+	background-image: url(../images/story_button_delete.gif);
+}
+.story_block #button_delete a {
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+	font-size: Verdana, Arial, Helvetica, sans-serif;
+}
 .story #button_add {
 	margin-bottom: 10px;
 	width: 200px; 
@@ -176,6 +193,20 @@ body {
 	color: #fff;
 	text-decoration: none;
 }
+
+.story_add_form {
+	border: 1px solid black;
+	margin: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 20px;
+	width: 45%;
+}
+.story_add_form #submit{
+	text-align: center;
+}
+
+
 .footer_bar {
 	width:100%;
 	height:100px;
