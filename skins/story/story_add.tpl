@@ -2,22 +2,27 @@
 	<form action="" method="post">
 	<table>
 		<tr>
-			<td>Заголовок истории</td>
-			<td><input type="text" name="title"></td>
+			<td> 
+				<div>Заголовок истории</div>
+				<input type="text" name="title"></span>
+			</td>
 		</tr>
 		<tr>
-			<td>Краткое описание истории</td>
-			<td><textarea rows="3" cols="50" name="description"></textarea></td>
+			<td>
+				Краткое описание истории
+				<textarea rows="3" cols="50" name="description"></textarea>
+			</td>
 		</tr>
 		<tr>
-			<td>История</td>
-			<td><textarea rows="10" cols="50" name="text"></textarea></td>
+			<td>
+				История
+				<textarea rows="10" cols="50" name="text"></textarea>
+			</td>
 		</tr>
 		<tr>
-			<td></td>
 			<td><span id="redtext"><?php echo @$error_story ?></span></td>
 		</tr>
 	</table>
-	<div id="submit"><input type="submit" name="submit_story_add" value="Добавить историю"></div>
+	<input type="submit" name="submit_story_add" value="Добавить историю">
 	</form>
 </div>

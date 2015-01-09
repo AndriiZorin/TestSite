@@ -8,7 +8,7 @@
 		<h2><?php echo $story_deleted; ?></h2>
 	<?php } ?>
 
-	<div id="button_add">
+	<div id="story_button_add">
 		<a href="index.php?module=story&page=story_add"><p>Добавить историю</p></a>
 	</div>
 	<!--Вывод всех историй из БД-->
@@ -16,15 +16,15 @@
 	     while  ($row = mysqli_fetch_assoc($story)) { 
 	 ?>
 	<div class="story_block"> 
-		<div id="title">
+		<div id="story_block_title">
 			<h1><?php echo htmlspecialchars($row['title']); ?></h1>
 		</div>
-		<div id ="text">
+		<div id ="story_block_text">
 			<?php echo htmlspecialchars($row['text']); ?>
 		</div>
-		<div id="button_delete">
+		<div id="story_block_button_delete">
 		<a href="index.php?module=story&page=story&action=delete&id=<?php echo $row['id'];?>">Удалить историю</a>
-	</div>
+		</div>
 	</div>
 	<?php  
 	  	}

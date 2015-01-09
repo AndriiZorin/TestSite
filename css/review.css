@@ -1,0 +1,42 @@
+.review_before_block {
+	margin: 10px;
+	margin-left: 100px;
+	font-size: Verdana, Arial, Helvetica, sans-serif;
+}
+.review {
+	border: 2px groove black;
+	margin-left: 100px;
+	margin-right: 100px;
+	background-color: #eee;
+	margin-bottom: 15px;
+}
+#review_title {
+	margin-left: 10px;
+	margin-bottom: -15px;
+	font-size: 14px;
+}
+#review_date {
+	color: #555;
+	margin-left: 10px;
+}
+#review_text {
+	padding: 5px;
+	padding-left: 20px;
+	font-size: Verdana, Arial, Helvetica, sans-serif;
+}
+.review_form {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 2px double black;
+	width: 40%;
+}
+.review_form h3 {
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+#review_form_submit {
+	text-align: center;
+}

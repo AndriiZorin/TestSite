@@ -8,7 +8,7 @@
 	if (isset($_GET['action']) && $_GET['action'] == 'delete') {
 		mysqli_query($link,"
 			DELETE FROM `story`
-			WHERE `id` = ".$_GET['id']."
+			WHERE `id` = ".(int)$_GET['id']."
 		");
 		$_SESSION['story_deleted'] = "История удалена!";
 		header("Location: index.php?module=story&page=story");

@@ -1,0 +1,35 @@
+.registration {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 15px;
+	border: 4px double black;
+	width: 20%;
+}
+
+.registration h3 {
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#reg_form_text {
+	text-align: right;
+}
+
+#reg_submit {
+	text-align: center;
+	margin: 5px;
+}
+#reg_required_field {
+	padding-top: 5px;
+	font-size: 10px;
+	text-align: center;
+}
+
+.reg_new_page {
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	font-size: 25px;
+}

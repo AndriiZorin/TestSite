@@ -6,4 +6,4 @@
 		$reg = 'Произошла ошибка, попробуйсте еще раз!';
 	}
 ?>
-<div class="created"><?php echo $reg; ?></div>
+<div class="reg_new_page"><?php echo $reg; ?></div>

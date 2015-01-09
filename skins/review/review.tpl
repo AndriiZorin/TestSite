@@ -11,13 +11,13 @@
      while  ($row = mysqli_fetch_assoc($review)) {
  ?>
 <div class="review">
-	<div id="title">
+	<div id="review_title">
 		<h4>
 			 <?php  echo $row['username']; ?>  
-			<span id="date"><?php  echo $row['date']; ?></span>
+			<span id="review_date"><?php  echo $row['date']; ?></span>
 		</h4>
 	</div>
-	<div id="text">
+	<div id="review_text">
 		<?php echo $row['review']; ?>
 	</div>
 </div>
@@ -43,6 +43,6 @@
 				<td><span id="redtext"><?php echo @$error_review; ?></span></td>
 			</tr>
 		</table>
-		<div id="submit"><input type="submit" name="submit_review" value="Отправить отзыв"></div>
+		<div id="review_form_submit"><input type="submit" name="submit_review" value="Отправить отзыв"></div>
 	</form>
 </div>

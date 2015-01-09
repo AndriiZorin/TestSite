@@ -1,6 +1,6 @@
  <div class="home"> 
-   	<div id="text"> 
-		<div id="mainline"> Пусти в сердце любовь... </div> 
+   	<div id="home_text"> 
+		Пусти в сердце любовь... 
 	</div>	  
-	<div id="image"></div>         
+	<div id="home_image"></div>         
 </div>
