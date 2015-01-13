@@ -1,7 +1,7 @@
 <div class="review_before_block">
 	<!--Вывод о успешном добавлении отзыва-->
-	<?php  if (isset($review_added)) { ?>
-		<p><?php echo $review_added; ?></p>
+	<?php  if (isset($info)) { ?>
+		<p><?php echo $info; ?></p>
 	<?php } ?>
 	Отзывов на странице: <?php echo mysqli_num_rows($review) //Общее количество отзывов?>
 </div>

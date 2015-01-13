@@ -1,0 +1,32 @@
+<div class="story_form">
+
+	<form action="" method="post">
+
+	<table>
+		<tr>
+			<td> 
+				<div>Заголовок истории</div>
+				<input type="text" name="title" value="<?php echo htmlspecialchars($row['title']); ?>">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Краткое описание истории
+				<textarea rows="3" cols="100" name="description"><?php echo htmlspecialchars($row['description']); ?></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				История
+				<textarea rows="10" cols="100" name="text"><?php echo htmlspecialchars($row['text']); ?></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td><span id="redtext"><?php echo @$error_story ?></span></td>
+		</tr>
+	</table>
+	<input type="submit" name="submit_story_form" value="Обновить запись">
+
+	</form>
+
+</div>

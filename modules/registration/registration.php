@@ -22,7 +22,7 @@
 					`age` 	   = '".(int)$_POST['age']."'
 				") or exit(mysqli_error($link));
 				//Перенапрпавление в случае удачной регистрации
-				$_SESSION['reg'] = 'Ваш акаунт успешно создан!';
+				$_SESSION['info'] = 'Ваш акаунт успешно создан!';
 	 			header("Location: index.php?module=registration&page=registration_created");
 				exit();
 			}

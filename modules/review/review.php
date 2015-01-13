@@ -24,7 +24,7 @@
 				") or exit(mysqli_error($link));	
 			}	
 			//Создаем сессию об успешном добавлении отзыва
-			$_SESSION['review_added'] = "Ваш отзыв успешно добавлен!";
+			$_SESSION['info'] = "Ваш отзыв успешно добавлен!";
 			header("Location: index.php?module=review&page=review");
 			exit();
 		}  else {
@@ -33,8 +33,8 @@
 	}
 
 	//"убиваем"  сессию о добавлении отзыва
-	if (isset($_SESSION['review_added'])) {
-		$review_added = $_SESSION['review_added'];
-		unset($_SESSION['review_added']);
+	if (isset($_SESSION['info'])) {
+		$info = $_SESSION['info'];
+		unset($_SESSION['info']);
 	} 
  ?>

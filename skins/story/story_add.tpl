@@ -1,4 +1,4 @@
-<div class="story_add_form">
+<div class="story_form">
 	<form action="" method="post">
 	<table>
 		<tr>
@@ -10,19 +10,19 @@
 		<tr>
 			<td>
 				Краткое описание истории
-				<textarea rows="3" cols="50" name="description"></textarea>
+				<textarea rows="3" cols="100" name="description"></textarea>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				История
-				<textarea rows="10" cols="50" name="text"></textarea>
+				<textarea rows="20" cols="100" name="text"></textarea>
 			</td>
 		</tr>
 		<tr>
-			<td><span id="redtext"><?php echo @$error_story ?></span></td>
+			<td><span id="redtext"><?php echo @$story_error ?></span></td>
 		</tr>
 	</table>
-	<input type="submit" name="submit_story_add" value="Добавить историю">
+	<input type="submit" name="submit_story_form" value="Добавить запись">
 	</form>
 </div>

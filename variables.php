@@ -1,5 +1,5 @@
 <?php 
-	$allowed = array ('home', 'story', 'review', 'registration', 'registration_created', 'story_add');
+	$allowed = array ('home', 'story', 'review', 'registration', 'registration_created', 'story_add', 'story_edit');
 	if(!isset($_GET['module']) || !isset($_GET['page'])) {
 		$_GET['module'] = 'home';
 		$_GET['page'] = 'home';
