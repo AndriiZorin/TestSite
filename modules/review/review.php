@@ -37,4 +37,26 @@
 		$info = $_SESSION['info'];
 		unset($_SESSION['info']);
 	} 
- ?>
+
+	//Множественное удаление
+
+	if (isset($_POST['review_button_delete']) && !empty($_POST['review_button_delete'])) {
+		foreach ($_POST['review_select'] as $k => $v) {
+			$_POST['review_select'][$k] = (int) $v;
+		}
+		$review_select = implode(", ", $_POST['review_select']);
+
+		mysqli_query($link, "
+			DELETE FROM `review`
+			WHERE `id` IN (".$review_select.")
+		") or exit(mysqli_error($link));
+
+		$_SESSION['info'] = "Отзывы удалены!";
+		header("Location: index.php?module=review&page=review");
+		exit();
+	}
+
+	if (isset($_SESSION['info'])) {
+		$info = $_SESSION['info'];
+		unset($_SESSION['info']);
+	} 

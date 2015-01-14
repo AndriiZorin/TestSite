@@ -1,5 +1,5 @@
 <?php 
-if (isset($_POST['submit_story_form']) && !empty($_POST['submit_story_form'])) {
+if (isset($_POST['story_button_form']) && !empty($_POST['story_button_form'])) {
 	if ( isset($_POST['title'], $_POST['text'], $_POST['description']) && !empty($_POST['title']) && !empty($_POST['text']) && !empty($_POST['description'])) {
 		mysqli_query($link,
 				"INSERT INTO `story` SET
@@ -15,4 +15,3 @@ if (isset($_POST['submit_story_form']) && !empty($_POST['submit_story_form'])) {
 		$story_error = "Все поля обязательные для заполнения!";
 	}
 }
-?>

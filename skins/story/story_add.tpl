@@ -4,7 +4,7 @@
 		<tr>
 			<td> 
 				<div>Заголовок истории</div>
-				<input type="text" name="title"></span>
+				<input type="text" SIZE=130 name="title"></span>
 			</td>
 		</tr>
 		<tr>
@@ -23,6 +23,6 @@
 			<td><span id="redtext"><?php echo @$story_error ?></span></td>
 		</tr>
 	</table>
-	<input type="submit" name="submit_story_form" value="Добавить запись">
+	<input type="submit" name="story_button_form" value="Добавить историю">
 	</form>
 </div>

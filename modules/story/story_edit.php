@@ -14,7 +14,7 @@
 
 	$row = mysqli_fetch_assoc($story_edit);
 
-	if (isset($_POST['submit_story_form']) && !empty($_POST['submit_story_form'])) {
+	if (isset($_POST['story_button_form']) && !empty($_POST['story_button_form'])) {
 		if (isset($_POST['title'], $_POST['text'], $_POST['description']) && !empty($_POST['title']) && !empty($_POST['text']) && !empty($_POST['description'])) {
 			mysqli_query($link, "
 				UPDATE `story` SET
@@ -25,7 +25,7 @@
 
 		") or exit(mysqli_error($link));
 
-		$_SESSION['info'] = "Запись отредактирована!";
+		$_SESSION['info'] = "История обновлена!";
 		header("Location: index.php?module=story&page=story");
 		exit();
 
@@ -33,4 +33,3 @@
 			$story_error = "Все поля обязательные для заполнения!";
 		}
 	}
-?>

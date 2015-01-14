@@ -1,4 +1,6 @@
-.registration {
+@charset "UTF-8";
+
+.reg {
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 30px;
@@ -8,7 +10,7 @@
 	width: 20%;
 }
 
-.registration h3 {
+.reg h3 {
 	text-align: center;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }

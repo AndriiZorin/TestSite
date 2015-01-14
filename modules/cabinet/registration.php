@@ -23,9 +23,8 @@
 				") or exit(mysqli_error($link));
 				//Перенапрпавление в случае удачной регистрации
 				$_SESSION['info'] = 'Ваш акаунт успешно создан!';
-	 			header("Location: index.php?module=registration&page=registration_created");
+	 			header("Location: index.php?module=cabinet&page=registration_created");
 				exit();
 			}
 		}
 	} 
-?>

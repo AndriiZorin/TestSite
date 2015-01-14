@@ -1,25 +1,35 @@
+@charset "UTF-8";
+
 .review_before_block {
 	margin: 10px;
 	margin-left: 100px;
 	font-size: Verdana, Arial, Helvetica, sans-serif;
 }
 .review {
-	border: 2px groove black;
 	margin-left: 100px;
 	margin-right: 100px;
-	background-color: #eee;
 	margin-bottom: 15px;
 }
-#review_title {
+
+#review_select {
+}
+
+.review_block {
+	border: 2px groove black;
+	border-radius: 15px;
+	background-color: #eee;
+	width: 1100px;
+}
+#review_block_title {
 	margin-left: 10px;
 	margin-bottom: -15px;
 	font-size: 14px;
 }
-#review_date {
+#review_block_date {
 	color: #555;
 	margin-left: 10px;
 }
-#review_text {
+#review_block_text {
 	padding: 5px;
 	padding-left: 20px;
 	font-size: Verdana, Arial, Helvetica, sans-serif;
@@ -39,4 +49,9 @@
 }
 #review_form_submit {
 	text-align: center;
+}
+
+#review_button_delete {
+	margin: 20px;
+	margin-left: 100px;
 }

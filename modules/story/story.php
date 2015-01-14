@@ -6,7 +6,7 @@
 
 	//Множественное удаление
 
-	if (isset($_POST['submit_story_delete'])) {
+	if (isset($_POST['story_button_delete']) && !empty($_POST['story_button_delete'])) {
 		foreach ($_POST['story_select'] as $k => $v) {
 			$_POST['story_select'][$k] = (int) $v;
 		}
@@ -17,7 +17,7 @@
 			WHERE `id` IN (".$story_select.")
 		") or exit(mysqli_error($link));
 
-		$_SESSION['info'] = "Запись удалена!";
+		$_SESSION['info'] = "История удалена!";
 		header("Location: index.php?module=story&page=story");
 		exit();
 	}
@@ -27,5 +27,3 @@
 		$info = $_SESSION['info'];
 		unset($_SESSION['info']);
 	} 
-
-?>

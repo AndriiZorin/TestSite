@@ -1,12 +1,18 @@
+@charset "UTF-8";
+
 .story {
-	margin-top: 40px;
-	margin-right: 40px;
-	margin-left: 40px;
+	margin: 40px;
 }
+
 .story_block {
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+.story_block_border {
 	border: 1px solid black;
 	border-radius: 20px;
-	margin-bottom: 40px;
+	background-color: #ccc;
 }
 
 #story_block_title {
@@ -21,38 +27,45 @@
 	font-size: Verdana, Arial, Helvetica, sans-serif;
 }
 
-#story_button_delete {
-	text-align: center;
-	width: 170px;
-	border-radius: 10px;
-	border: 0px solid black;
-	background-color: #111;
+.story_buttons {
+	border: 1px dashed black;
+	margin: 10px;
 }
-#story_button_delete a {
+
+#story_button_add {
+	margin-top: -20px;
+	margin-bottom: -20px;
+	text-align: center;
+	width: 200px;
+	border-radius: 10px;
+	background-color: #aaa;
+}
+
+#story_button_add a {
 	color: #fff;
 	font-size: 20px;
 	text-decoration: none;
 	font-size: Verdana, Arial, Helvetica, sans-serif;
 }
-#story_button_add {
-	margin-bottom: 10px;
-	text-align: center;
-	width: 200px;
-	height: 30px;
-	border-radius: 10px;
-	border: 0px solid black;
-	background-color: #aaa;
+#story_button_delete {
+	float: right;
 }
 
-#story_button_add a {
-	font-size: 20px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+#story_button_edit {
+	text-align: center;
+	width: 230px;
+	border-radius: 10px;
+	background-color: #111;
+}
+#story_button_edit a {
 	color: #fff;
+	font-size: 20px;
 	text-decoration: none;
+	font-size: Verdana, Arial, Helvetica, sans-serif;
 }
 
 #story_select {
-
+	float: right;
 }
 
 .story_form {
@@ -62,6 +75,6 @@
 	margin-right: auto;
 	margin-left: auto;
 	padding: 10px;
-	width: 80%;
+	width: 65%;
 	text-align: center;
 }

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Love stories, as they are</title>
+	<title>LoveStory</title>
 	<link rel="stylesheet" href="./css/index.css" media="screen"  />
 	<link rel="stylesheet" href="./css/story.css" media="screen"  />
 	<link rel="stylesheet" href="./css/review.css" media="screen"  />
-	<link rel="stylesheet" href="./css/registration.css" media="screen"  />
+	<link rel="stylesheet" href="./css/cabinet.css" media="screen"  />
 </head>
 <body>
 
 <div class="header">
-	<div id="login"><a href="index.php?module=registration&page=registration">Создать акаунт</a></div>
+	<div id="login"><a href="index.php?module=cabinet&page=registration">Создать акаунт</a></div>
 	<div id="header_center"> 
 		<div id="header_image"></div>  
 		<div class="navigation"> 
