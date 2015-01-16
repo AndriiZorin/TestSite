@@ -1,10 +1,10 @@
 <?php 
-	$story_edit = mysqli_query($link,"
+	$story_edit = query("
 		SELECT *
 		FROM `story`
 		WHERE `id` = ".(int)$_GET['id']." 
 		LIMIT 1
-	") or exit(mysql_error($link));
+	");
 	
 	if (!mysqli_num_rows($story_edit)) {
 		$_SESSION['info'] = "Данной записи не существует!";
@@ -16,14 +16,14 @@
 
 	if (isset($_POST['story_button_form']) && !empty($_POST['story_button_form'])) {
 		if (isset($_POST['title'], $_POST['text'], $_POST['description']) && !empty($_POST['title']) && !empty($_POST['text']) && !empty($_POST['description'])) {
-			mysqli_query($link, "
+			query("
 				UPDATE `story` SET
 				`title` 		 = '".mysqli_real_escape_string($link, $_POST['title'])."',
 				`text`	  		 = '".mysqli_real_escape_string($link, $_POST['text'])."',
 				`description`    = '".mysqli_real_escape_string($link, $_POST['description'])."'
 				WHERE `id` = ".(int)$_GET['id']." 
 
-		") or exit(mysqli_error($link));
+		");
 
 		$_SESSION['info'] = "История обновлена!";
 		header("Location: index.php?module=story&page=story");

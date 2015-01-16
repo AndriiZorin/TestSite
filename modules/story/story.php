@@ -1,8 +1,8 @@
 <?php 
 	//Вывод отзывов на страницу
-	$story_show = mysqli_query($link,"
+	$story_show = query("
 		SELECT * FROM `story` ORDER BY `id` DESC
-	") or exit(mysqli_error ($link));	
+	");	
 
 	//Множественное удаление
 
@@ -12,10 +12,10 @@
 		}
 		$story_select = implode(", ", $_POST['story_select']);
 
-		mysqli_query($link, "
+		query("
 			DELETE FROM `story`
 			WHERE `id` IN (".$story_select.")
-		") or exit(mysqli_error($link));
+		");
 
 		$_SESSION['info'] = "История удалена!";
 		header("Location: index.php?module=story&page=story");

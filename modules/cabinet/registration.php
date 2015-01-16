@@ -13,14 +13,14 @@
 				$errors['email'] = "поле 'email' пустое!";
 			}
 			//Заносим пользователья в БД
-			if (!count($errors)) {
-				mysqli_query($link,
-					"INSERT INTO `user` SET
+			if (!count ($errors)) {
+				query("
+					INSERT INTO `user` SET
 					`login`    = '".mysqli_real_escape_string($link, $_POST['login'])."',
 					`password` = '".mysqli_real_escape_string($link, $_POST['password'])."',
 					`email`    = '".mysqli_real_escape_string($link, $_POST['email'])."',
 					`age` 	   = '".(int)$_POST['age']."'
-				") or exit(mysqli_error($link));
+				");
 				//Перенапрпавление в случае удачной регистрации
 				$_SESSION['info'] = 'Ваш акаунт успешно создан!';
 	 			header("Location: index.php?module=cabinet&page=registration_created");
