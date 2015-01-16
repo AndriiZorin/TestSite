@@ -1,7 +1,7 @@
 <?php 
 	//Вывод отзывов на страницу
 	$review = query("
-		SELECT * FROM `review` ORDER BY `date` DESC
+		SELECT * FROM `review` ORDER BY `dae` DESC
 	");
 
 	//Занесене написаного отзыва в БД

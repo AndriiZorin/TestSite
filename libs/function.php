@@ -11,10 +11,11 @@ function query ($query) {
 	global $link;
 	$res = mysqli_query($link, $query);
 	if ($res === false) {
-		echo "Запрос ".$query.'<br>'.mysql_error($link);
+		$error = "Query ".$query."<br> \n".mysqli_error($link);
+		file_put_contents('logs/mysql.log', strip_tags($error)."\n\n", FILE_APPEND);
+		echo $error;
 		exit();
 	} else {
 		return $res;
 	}
-	
 }
