@@ -6,19 +6,19 @@
 		<tr>
 			<td> 
 				<div>Заголовок истории</div>
-				<input type="text" name="title" SIZE=130 value="<?php echo htmlspecialchars($row ['title']); ?>">
+				<input type="text" name="title" SIZE=130 value="<?php echo filter_html_tags($row ['title']); ?>">
 			</td>
 		</tr>
 		<tr>
 			<td>
 				Краткое описание истории
-				<textarea rows="3" cols="100" name="description"><?php echo htmlspecialchars($row ['description']); ?></textarea>
+				<textarea rows="3" cols="100" name="description"><?php echo filter_html_tags($row ['description']); ?></textarea>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				История
-				<textarea rows="10" cols="100" name="text"><?php echo htmlspecialchars($row ['text']); ?></textarea>
+				<textarea rows="10" cols="100" name="text"><?php echo filter_html_tags($row ['text']); ?></textarea>
 			</td>
 		</tr>
 		<tr>

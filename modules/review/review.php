@@ -1,7 +1,7 @@
 <?php 
 	//Вывод отзывов на страницу
-	$review = query("
-		SELECT * FROM `review` ORDER BY `dae` DESC
+	$review = my_query("
+		SELECT * FROM `review` ORDER BY `date` DESC
 	");
 
 	//Занесене написаного отзыва в БД
@@ -9,17 +9,17 @@
 		if (isset($_POST['review']) && !empty($_POST['review'])) {
 			//Если поле имя, не заполнено, то по умолчанию - ГОСТЬ
 			if (empty($_POST['username'])) {
-				query("
+				my_query("
 					INSERT INTO `review` SET
 					`username` = 'Гость', 
-					`review`   = '".mysqli_real_escape_string($link, $_POST['review'])."',
+					`review`   = '".filter_string($_POST['review'])."',
 					`date`     = NOW()
 				");	
 			} else {
-				query("
+				my_query("
 					INSERT INTO `review` SET
-					`username` = '".mysqli_real_escape_string($link, $_POST['username'])."',
-					`review`   = '".mysqli_real_escape_string($link, $_POST['review'])."',
+					`username` = '".filter_string($_POST['username'])."',
+					`review`   = '".filter_string($_POST['review'])."',
 					`date`     = NOW()
 				");	
 			}	
@@ -41,12 +41,11 @@
 	//Множественное удаление
 
 	if (isset($_POST['review_button_delete']) && !empty($_POST['review_button_delete'])) {
-		foreach ($_POST['review_select'] as $k => $v) {
-			$_POST['review_select'][$k] = (int) $v;
-		}
+	
+		filter_int($_POST['review_select']);
 		$review_select = implode(", ", $_POST['review_select']);
 
-		query("
+		my_query("
 			DELETE FROM `review`
 			WHERE `id` IN (".$review_select.")
 		");

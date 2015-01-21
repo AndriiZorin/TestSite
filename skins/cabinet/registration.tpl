@@ -4,7 +4,7 @@
 			<table>
 				<tr>
 					<td id="reg_form_text">Логин *</td>
-					<td><input type="text" name="login" value="<?php echo @htmlspecialchars($_POST['login']); //Зашита от символов?>"></td>
+					<td><input type="text" name="login" value="<?php echo @filter_html_tags($_POST['login']); //Зашита от символов?>"></td>
 				</tr>
 				<tr>
 					<td></td>
@@ -12,7 +12,7 @@
 				</tr>
 				<tr>
 					<td id="reg_form_text">E-mail *</td>
-					<td><input type="email" name="email" value="<?php echo @htmlspecialchars($_POST['email']); ?>"></td>
+					<td><input type="email" name="email" value="<?php echo @filter_html_tags($_POST['email']); ?>"></td>
 				</tr>
 					<tr>
 					<td></td>

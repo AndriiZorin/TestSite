@@ -28,10 +28,10 @@
 	<div class="footer_bar"></div>
 	<div class="footer_copyright">
 		<?php //copyright
-			if (COPYRIGHT == CURRENTYEAR) {
+			if (COPYRIGHT == CURRENT_YEAR) {
 				echo "&copy; ".COPYRIGHT." ";
 			} else {
-				echo "&copy; ".COPYRIGHT ." - ".CURRENTYEAR." ";
+				echo "&copy; ".COPYRIGHT ." - ".CURRENT_YEAR." ";
 			}
 		 ?>	
 	</div>

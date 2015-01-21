@@ -4,7 +4,7 @@
 			//Проверка на заполнение полей
 			$errors = array ();
 			if(empty($_POST['login'])) {
-				$errors['login'] = "поел 'login' пустое!";
+				$errors['login'] = "поле 'login' пустое!";
 			}
 			if(empty($_POST['password'])) {
 				$errors['password'] = "поле 'пароль' пустое!";
@@ -14,11 +14,11 @@
 			}
 			//Заносим пользователья в БД
 			if (!count ($errors)) {
-				query("
+				my_query("
 					INSERT INTO `user` SET
-					`login`    = '".mysqli_real_escape_string($link, $_POST['login'])."',
-					`password` = '".mysqli_real_escape_string($link, $_POST['password'])."',
-					`email`    = '".mysqli_real_escape_string($link, $_POST['email'])."',
+					`login`    = '".filter_string($_POST['login'])."',
+					`password` = '".filter_string($_POST['password'])."',
+					`email`    = '".filter_string($_POST['email'])."',
 					`age` 	   = '".(int)$_POST['age']."'
 				");
 				//Перенапрпавление в случае удачной регистрации

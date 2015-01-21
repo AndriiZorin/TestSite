@@ -1,18 +1,16 @@
 <?php 
 	//Вывод отзывов на страницу
-	$story_show = query("
+	$story_show = my_query("
 		SELECT * FROM `story` ORDER BY `id` DESC
 	");	
 
 	//Множественное удаление
 
 	if (isset($_POST['story_button_delete']) && !empty($_POST['story_button_delete'])) {
-		foreach ($_POST['story_select'] as $k => $v) {
-			$_POST['story_select'][$k] = (int) $v;
-		}
+		filter_int($_POST['story_select']);
 		$story_select = implode(", ", $_POST['story_select']);
 
-		query("
+		my_query("
 			DELETE FROM `story`
 			WHERE `id` IN (".$story_select.")
 		");

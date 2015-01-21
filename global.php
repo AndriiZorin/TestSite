@@ -1,6 +1,8 @@
 <?php  
 define('COPYRIGHT',2014);
-define('CURRENTYEAR',date("Y"));
+//Date
+define('CURRENT_YEAR',date("Y"));
+define('CURRENT_FULL_DATE',date("Y-m-d H:i:s"));
 //For database
 define('DB_LOCAL','localhost');
 define('DB_LOGIN','admin');

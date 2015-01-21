@@ -11,9 +11,6 @@
 	margin-bottom: 15px;
 }
 
-#review_select {
-}
-
 .review_block {
 	border: 2px groove black;
 	border-radius: 15px;
@@ -41,6 +38,7 @@
 	margin-bottom: 10px;
 	padding: 10px;
 	border: 2px double black;
+	border-radius: 10px;
 	width: 40%;
 }
 .review_form h3 {

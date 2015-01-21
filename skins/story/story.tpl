@@ -25,10 +25,10 @@
 	<div class="story_block">
 		<div class="story_block_border"> 
 			<div id="story_block_title">
-				<h1><?php echo htmlspecialchars($row['title']); ?></h1>
+				<h1><?php echo filter_html_tags($row['title']); ?></h1>
 			</div>
 			<div id ="story_block_text">
-				<?php echo htmlspecialchars($row['text']); ?>
+				<?php echo filter_html_tags($row['text']); ?>
 			</div>
 		</div>
 
