@@ -28,7 +28,7 @@
 				</tr>
 				<tr>
 					<td id="reg_form_text">Возраст  </td>
-					<td><input type="text" name="age" value="<?php if (isset($_POST['age'])) {echo @($_POST['age']);} //Вывод возрасста, если он существует?>"></td>
+					<td><input type="text" name="age" value="<?php if (isset($_POST['age'])) {echo @($_POST['age']);} //Вывод возраста, если он существует?>"></td>
 				</tr>
 			</table>
 			<div id="reg_submit"><input type="submit" name="submit" value="Создать акаунт"></div>

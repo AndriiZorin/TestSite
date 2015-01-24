@@ -4,7 +4,7 @@
 		<h2><?php echo $info; ?></h2>
 	<?php } ?>
 
-<form action="" method="post">
+	<form action="" method="post">
 
 	<div class="story_buttons">
 		<table>
@@ -50,5 +50,5 @@
 	  	}
 	} 
 	?>
-</form>
+	</form>
 </div>

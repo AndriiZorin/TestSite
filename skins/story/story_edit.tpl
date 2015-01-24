@@ -1,7 +1,5 @@
 <div class="story_form">
-
 	<form action="" method="post">
-
 	<table>
 		<tr>
 			<td> 
@@ -26,7 +24,5 @@
 		</tr>
 	</table>
 	<input type="submit" name="story_button_form" value="Обновить историю">
-
 	</form>
-
 </div>

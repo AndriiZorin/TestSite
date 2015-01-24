@@ -5,7 +5,6 @@
 	");	
 
 	//Множественное удаление
-
 	if (isset($_POST['story_button_delete']) && !empty($_POST['story_button_delete'])) {
 		filter_int($_POST['story_select']);
 		$story_select = implode(", ", $_POST['story_select']);

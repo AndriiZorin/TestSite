@@ -1,4 +1,5 @@
 <?php 
+	//Регистрация существубщий модулей
 	$allowed = array ('home', 'story', 'review', 'cabinet');
 	if(!isset($_GET['module']) || !isset($_GET['page'])) {
 		$_GET['module'] = 'home';

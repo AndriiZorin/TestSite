@@ -39,7 +39,6 @@
 	} 
 
 	//Множественное удаление
-
 	if (isset($_POST['review_button_delete']) && !empty($_POST['review_button_delete'])) {
 	
 		filter_int($_POST['review_select']);
