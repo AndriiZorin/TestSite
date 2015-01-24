@@ -23,6 +23,10 @@ function my_query($query) {
 		return $res;
 	}
 }
+//Автоматическое подключение классов
+function __autoload($class) {
+	include '.libs/class_'.$class.'.php';
+}
 
 //Фильтрация вводимых данных
 function filter_int($num) {
