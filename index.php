@@ -5,7 +5,7 @@ header('Content-Type: text/html; charset=utf-8');
 session_start();
 // Конфиг сайтa
 include_once 'global.php'; //Глобальные перменные
-include_once 'libs/function.php'; //Функции
+include_once 'lib/functions.php'; //Функции
 include_once 'variables.php'; //Переменные которые будут изменяться
 //Подключение к БД
 $link = mysqli_connect(DB_LOCAL, DB_LOGIN, DB_PASS, DB_NAME);

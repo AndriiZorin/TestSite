@@ -25,7 +25,7 @@ function my_query($query) {
 }
 //Автоматическое подключение классов
 function __autoload($class) {
-	include '.libs/class_'.$class.'.php';
+	include '.lib/class_'.$class.'.php';
 }
 
 //Фильтрация вводимых данных

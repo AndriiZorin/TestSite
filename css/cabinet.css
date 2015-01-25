@@ -1,17 +1,20 @@
 @charset "UTF-8";
 
 .reg {
+	color: #310066;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
 	padding: 15px;
-	border: 4px double black;
+	border: 4px double #310066;
+	border-radius: 20px;
 	width: 20%;
 }
 
 .reg h3 {
 	text-align: center;
+	font-style: italic;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
@@ -26,6 +29,7 @@
 #reg_required_field {
 	padding-top: 5px;
 	font-size: 10px;
+	font-style: italic;
 	text-align: center;
 }
 

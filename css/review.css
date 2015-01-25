@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 .review_before_block {
+	color: #310066;
 	margin: 10px;
 	margin-left: 100px;
 	font-size: Verdana, Arial, Helvetica, sans-serif;
@@ -14,7 +15,7 @@
 .review_block {
 	border: 2px groove black;
 	border-radius: 15px;
-	background-color: #eee;
+	background-color: #ccccff;
 	width: 1100px;
 }
 #review_block_title {
@@ -37,9 +38,10 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding: 10px;
-	border: 2px double black;
+	border: 2px double #310066;
 	border-radius: 10px;
 	width: 40%;
+	color: #310066;
 }
 .review_form h3 {
 	text-align: center;

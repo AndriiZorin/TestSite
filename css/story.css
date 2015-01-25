@@ -12,7 +12,7 @@
 .story_block_border {
 	border: 1px solid black;
 	border-radius: 20px;
-	background-color: #ccc;
+	background-color: #ccccff;
 }
 
 #story_block_title {
@@ -38,7 +38,7 @@
 	text-align: center;
 	width: 200px;
 	border-radius: 10px;
-	background-color: #aaa;
+	background-color: #8b00ff;
 }
 
 #story_button_add a {
@@ -55,7 +55,7 @@
 	text-align: center;
 	width: 230px;
 	border-radius: 10px;
-	background-color: #111;
+	background-color: #120a8f;
 }
 #story_button_edit a {
 	color: #fff;
