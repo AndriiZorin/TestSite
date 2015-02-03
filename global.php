@@ -8,3 +8,4 @@ define('DB_LOCAL','localhost');
 define('DB_LOGIN','admin');
 define('DB_PASS','admin');
 define('DB_NAME','main');
+define('DOMAIN', 'http://localhost/LoveStory');

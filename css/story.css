@@ -4,69 +4,63 @@
 	margin: 40px;
 }
 
-.story_block {
+.story_show {
 	margin-bottom: 30px;
-	margin-top: 30px;
-}
-
-.story_block_border {
-	border: 1px solid black;
+	border: 2px solid purple;
 	border-radius: 20px;
-	background-color: #ccccff;
+	background-color: #eeeeff;
 }
 
-#story_block_title {
+#story_show_title {
 	text-align: center;
-	font-size: 14px;
-	padding-bottom: 30px;
+	font-size: 18px;
+	font-family: Gabriola, Arial, Helvetica, sans-serif;
 }
-#story_block_text {
+#story_show_text {
 	padding-bottom: 50px;
 	padding-right: 50px;
 	padding-left: 50px;
-	font-size: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
+/* --------------------------------------------
+ 	Кнопки
+*/---------------------------------------------
 .story_buttons {
-	border: 1px dashed black;
-	margin: 10px;
+	margin: 2px;
 }
 
-#story_button_add {
+#story_add {
 	margin-top: -20px;
 	margin-bottom: -20px;
 	text-align: center;
-	width: 200px;
+	width: 300px;
 	border-radius: 10px;
 	background-color: #8b00ff;
 }
 
-#story_button_add a {
+#story_add a {
 	color: #fff;
 	font-size: 20px;
 	text-decoration: none;
-	font-size: Verdana, Arial, Helvetica, sans-serif;
-}
-#story_button_delete {
-	float: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
-#story_button_edit {
+#story_edit {
+	float: right;
 	text-align: center;
-	width: 230px;
+	width: 260px;
 	border-radius: 10px;
 	background-color: #120a8f;
 }
-#story_button_edit a {
+#story_edit a {
 	color: #fff;
 	font-size: 20px;
 	text-decoration: none;
-	font-size: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
-#story_select {
-	float: right;
-}
+/*  Для файлов story_add.tpl и story_edit.tpl */
 
 .story_form {
 	border: 1px solid black;

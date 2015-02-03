@@ -12,14 +12,14 @@
 				my_query("
 					INSERT INTO `review` SET
 					`username` = 'Гость', 
-					`review`   = '".filter_string($_POST['review'])."',
+					`review`   = '".mres($_POST['review'])."',
 					`date`     = NOW()
 				");	
 			} else {
 				my_query("
 					INSERT INTO `review` SET
-					`username` = '".filter_string($_POST['username'])."',
-					`review`   = '".filter_string($_POST['review'])."',
+					`username` = '".mres($_POST['username'])."',
+					`review`   = '".mres($_POST['review'])."',
 					`date`     = NOW()
 				");	
 			}	
@@ -54,7 +54,7 @@
 		exit();
 	}
 
+		unset($_SESSION['info']);
 	if (isset($_SESSION['info'])) {
 		$info = $_SESSION['info'];
-		unset($_SESSION['info']);
 	} 

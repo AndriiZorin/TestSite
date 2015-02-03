@@ -35,7 +35,6 @@
 					</div>
 				</div>
 			</td>
-		
 		</tr>
 	</table>
 </div>
@@ -46,7 +45,7 @@
 </form>
 <!--Форма отрпавки отзыва-->
 <div class="review_form">
-	<h3>Тут можно оставить отзыв о сайте LoveStory!</h3>
+	<h3>Тут можно оставить отзыв о сайте <span id="LoveStory_style">LoveStory</span>!</h3>
 	<form action="" method="post">
 		<table>
 			<tr>

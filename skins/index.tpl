@@ -10,13 +10,16 @@
 <body>
 
 	<div class="header">
-		<div id="login"><a href="index.php?module=cabinet&page=registration">Создать акаунт</a></div>
+		<div class="cab">
+			<div id="cab_button"><a href="index.php?module=cabinet&page=registration">Создать акаунт</a></div>	
+			<div id="cab_button"><a href="index.php?module=cabinet&page=authorization">Войти на сайт</a></div>
+		</div>
 		<div id="header_center"> 
 			<div id="header_image"></div>  
-			<div class="navigation"> 
-				<div id="navigation_button"><a href="index.php?module=home&page=home">Главная</a></div>
-				<div id="navigation_button"><a href="index.php?module=story&page=story">Истории</a></div>
-				<div id="navigation_button"><a href="index.php?module=review&page=review">Отзывы</a></div>
+			<div class="nav"> 
+				<div id="nav_button"><a href="index.php?module=home&page=home">Главная</a></div>
+				<div id="nav_button"><a href="index.php?module=story&page=story">Истории</a></div>
+				<div id="nav_button"><a href="index.php?module=review&page=review">Отзывы</a></div>
 			</div>
 		</div> 
 	</div>	

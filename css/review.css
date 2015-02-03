@@ -4,7 +4,7 @@
 	color: #310066;
 	margin: 10px;
 	margin-left: 100px;
-	font-size: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Verdana, Arial, Helvetica, sans-seriff;
 }
 .review {
 	margin-left: 100px;
@@ -13,7 +13,7 @@
 }
 
 .review_block {
-	border: 2px groove black;
+	border: 2px groove purple;
 	border-radius: 15px;
 	background-color: #ccccff;
 	width: 1100px;
@@ -22,6 +22,7 @@
 	margin-left: 10px;
 	margin-bottom: -15px;
 	font-size: 14px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
 }
 #review_block_date {
 	color: #555;
@@ -30,8 +31,11 @@
 #review_block_text {
 	padding: 5px;
 	padding-left: 20px;
-	font-size: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
+
+/* Форма добавления новго отзыва */
+
 .review_form {
 	margin-right: auto;
 	margin-left: auto;
@@ -45,7 +49,7 @@
 }
 .review_form h3 {
 	text-align: center;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: "Comic Sans MS", cursive, sans-serif;
 }
 #review_form_submit {
 	text-align: center;

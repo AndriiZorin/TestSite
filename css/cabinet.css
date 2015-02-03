@@ -1,39 +1,34 @@
 @charset "UTF-8";
 
-.reg {
-	color: #310066;
+.cabinet {
+	width: 25%;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	padding: 15px;
+	padding: 20px;
+	color: #310066;
 	border: 4px double #310066;
 	border-radius: 20px;
-	width: 20%;
-}
-
-.reg h3 {
 	text-align: center;
-	font-style: italic;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
-#reg_form_text {
+#cab_form {
+	margin-left: 35px;
+	margin-bottom: 10px;
+}
+
+#cab_form_text {
 	text-align: right;
 }
 
-#reg_submit {
-	text-align: center;
-	margin: 5px;
-}
 #reg_required_field {
-	padding-top: 5px;
 	font-size: 10px;
 	font-style: italic;
-	text-align: center;
 }
 
-.reg_new_page {
+.cabinet_info_page {
 	text-align: center;
 	margin-top: 100px;
 	margin-bottom: 100px;
