@@ -4,15 +4,28 @@
 			$res = my_query("SELECT *
 				FROM `user`
 				WHERE `login` = '".mres($_POST['login'])."'
-				AND `password` = '".my_crypt($_POST['password'])."'
+					AND `password` = '".my_crypt($_POST['password'])."'
+					AND `active` = 1
 				LIMIT 1
 			");
 
 			if (mysqli_num_rows($res)) {
-				$errors = "Done";
+				$_SESSION['user'] = mysqli_fetch_assoc($res);
+				$status = 'ok';
 			} else {
-				$errors = "Такого пользователья не существует ".'</br>'."либо пароль был введен не верно";
+				$errors = "Пользователь не существует ".'</br>'."либо пароль был введён не верно";
 			}
 		}
+	}
+
+	//Доступ к редактированию
+	if (!isset($_SESSION['user']) || $_SESSION['user']['access'] != 1) {
+		exit();
+	}
+	//Доступ к комментированию
+	if (isset($_SESSION['user'])) {
+		# code...
+	} else {
+		//Need auth
 	}
  ?>

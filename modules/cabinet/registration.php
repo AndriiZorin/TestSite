@@ -50,7 +50,7 @@
 					`password` = '".my_crypt($_POST['password'])."',
 					`email`    = '".mres($_POST['email'])."',
 					`age` 	   = ".(int)$_POST['age'].",
-					`hash`	   = '".my_crypt($_POST['login'])."'
+					`hash`	   = '".my_crypt($_POST['login'], $_POST['age'])."'
 				");
 
 				$id = mysqli_insert_id($link);

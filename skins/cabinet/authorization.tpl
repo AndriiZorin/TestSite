@@ -1,5 +1,7 @@
 <div class="cabinet">
-	<div id="redtext"><?php echo @$errors; ?></div>
+
+	<div id="redtext"><?php if (!isset($status) || $status != 'ok') {echo @$errors;  ?></div>
+
 	<h3>Авторизироваться</h3>
 	<form action="" method="post">
 	<div id="cab_form">
@@ -16,4 +18,7 @@
 	</div>
 	<input type="submit" name="submit_auth" value="Войти на сайт">	
 	</form>
+	<?php 	} else {  ?>
+		Вы вошли на <span id="LoveStory">LoveStory</span>
+	<?php } ?>
 </div>
