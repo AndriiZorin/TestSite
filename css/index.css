@@ -35,15 +35,16 @@ body {
 }	
 
 #cab_button {
-	float:right;
 	width: 160px; 
 	height: 30px;
 	margin-left: 20px;
+	margin-bottom: 20px;
 	text-align:center;
 	border-radius: 10px;
 	border: 2px solid #e2e2e2;
 	background-color: #87CEEB;
 }
+
 
 #cab_button a {
 	font-size: 20px;
@@ -52,10 +53,21 @@ body {
 	font-family:  "Comic Sans MS", cursive, sans-serif;
 }
 
+#cab_login {
+	display: inline;
+	margin-left: 5px;
+	color: #ffffff;
+}
+
+#cab_login a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
 .nav {
 	float: right;
 	margin-top: 140px; 
-	margin-right: -250px;
+	margin-right: -200px;
 }
 
 #nav_button {

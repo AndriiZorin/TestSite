@@ -29,7 +29,7 @@ function my_query($query) {
 			"date: ".date("H:i d-m-Y")."<br>\n".
 			"----------------------------------";
 
-		file_put_contents('logs/mysql.log', strip_tags($error)."\n\n", FILE_APPEND);
+		file_put_contents('./logs/mysql.log', strip_tags($error)."\n\n", FILE_APPEND);
 		echo $error;
 		exit();
 	} else {
@@ -40,7 +40,7 @@ function my_query($query) {
 
 //Автоматическое подключение классов
 function __autoload($class) {
-	include 'lib/class_'.$class.'.php';
+	include './lib/class_'.$class.'.php';
 }
 
 //Фильтрация вводимых данных

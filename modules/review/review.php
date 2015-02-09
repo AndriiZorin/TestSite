@@ -7,22 +7,13 @@
 	//Занесене написаного отзыва в БД
 	if (isset($_POST['submit_review']) && !empty($_POST['submit_review'])) {
 		if (isset($_POST['review']) && !empty($_POST['review'])) {
-			//Если поле имя, не заполнено, то по умолчанию - ГОСТЬ
-			if (empty($_POST['username'])) {
-				my_query("
-					INSERT INTO `review` SET
-					`username` = 'Гость', 
-					`review`   = '".mres($_POST['review'])."',
-					`date`     = NOW()
-				");	
-			} else {
-				my_query("
-					INSERT INTO `review` SET
-					`username` = '".mres($_POST['username'])."',
-					`review`   = '".mres($_POST['review'])."',
-					`date`     = NOW()
-				");	
-			}	
+
+			my_query("
+				INSERT INTO `review` SET
+				`username` = '".mres($_SESSION['user']['login'])."',
+				`review`   = '".mres($_POST['review'])."',
+				`date`     = NOW()
+			");	
 			//Создаем сессию об успешном добавлении отзыва
 			$_SESSION['info'] = "Ваш отзыв успешно добавлен!";
 			header("Location: index.php?module=review&page=review");

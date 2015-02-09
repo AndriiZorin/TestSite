@@ -59,3 +59,18 @@
 	margin: 20px;
 	margin-left: 100px;
 }
+
+/* Для гостей сайта */
+
+.guest {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	height: 50px;
+	padding-top: 20px;
+	text-align: center;
+	background-color: #AFEEEE;
+	color: #310066;
+	font-size: 20px;
+	border: 2px double #310066;
+	border-radius: 10px;
+}

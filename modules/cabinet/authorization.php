@@ -1,4 +1,5 @@
 <?php 
+	//Авторизироваться на сайте заполнив форму
 	if (isset($_POST['submit_auth']) && !empty($_POST['submit_auth'])) {
 		if (isset($_POST['password'], $_POST['login'])) {
 			$res = my_query("SELECT *
@@ -16,16 +17,5 @@
 				$errors = "Пользователь не существует ".'</br>'."либо пароль был введён не верно";
 			}
 		}
-	}
-
-	//Доступ к редактированию
-	if (!isset($_SESSION['user']) || $_SESSION['user']['access'] != 1) {
-		exit();
-	}
-	//Доступ к комментированию
-	if (isset($_SESSION['user'])) {
-		# code...
-	} else {
-		//Need auth
 	}
  ?>

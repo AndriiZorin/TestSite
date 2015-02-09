@@ -11,8 +11,13 @@
 
 	<div class="header">
 		<div class="cab">
-			<div id="cab_button"><a href="index.php?module=cabinet&page=registration">Создать акаунт</a></div>	
+			<?php  if (isset($_SESSION['user'])) { ?>
+			<div id="cab_login">Ваш логин: <span id="LoveStory"><?php echo $_SESSION['user']['login']; ?></span></div>
+			<div id="cab_login"><a href="index.php?module=cabinet&page=exit">[ Выход ]</a></div>
+			<?php } else { ?>
 			<div id="cab_button"><a href="index.php?module=cabinet&page=authorization">Войти на сайт</a></div>
+			<div id="cab_button"><a href="index.php?module=cabinet&page=registration">Создать акаунт</a></div>	
+			<?php } ?>
 		</div>
 		<div id="header_center"> 
 			<div id="header_image"></div>  
