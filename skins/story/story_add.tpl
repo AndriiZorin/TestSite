@@ -1,3 +1,4 @@
+<?php  if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {?>
 <div class="story_form">
 	<form action="" method="post">
 	<table>
@@ -26,3 +27,4 @@
 	<input type="submit" name="submit_form" value="Добавить историю">
 	</form>
 </div>
+<?php } else { echo '<div id="infomessage">'."У вас нет прав доступа к этой странице".'</div>'; }?>

@@ -5,7 +5,8 @@
 	<link rel="stylesheet" href="./css/index.css" media="screen"  />
 	<link rel="stylesheet" href="./css/story.css" media="screen"  />
 	<link rel="stylesheet" href="./css/review.css" media="screen"  />
-	<link rel="stylesheet" href="./css/cabinet.css" media="screen"  />
+	<link rel="stylesheet" href="./css/cabinet.css" media="screen" />
+	<link rel="stylesheet" href="./css/universal.css" media="screen" />
 </head>
 <body>
 

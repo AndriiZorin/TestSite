@@ -18,7 +18,6 @@
 	</div>
 	<input type="submit" name="submit_auth" value="Войти на сайт">	
 	</form>
-	<?php 	} else {  ?>
-		Вы вошли на <span id="LoveStory">LoveStory</span>
-	<?php } ?>
+	<?php 	} else {  ?>Вы авторизированы<?php } ?>
+	
 </div>

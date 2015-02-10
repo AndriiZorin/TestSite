@@ -34,9 +34,15 @@
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
+#review_button_delete {
+	margin: 20px;
+	margin-left: 100px;
+}
+
 /* Форма добавления новго отзыва */
 
 .review_form {
+	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 10px;
@@ -48,16 +54,7 @@
 	color: #310066;
 }
 .review_form h3 {
-	text-align: center;
 	font-family: "Comic Sans MS", cursive, sans-serif;
-}
-#review_form_submit {
-	text-align: center;
-}
-
-#review_button_delete {
-	margin: 20px;
-	margin-left: 100px;
 }
 
 /* Для гостей сайта */

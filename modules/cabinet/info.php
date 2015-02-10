@@ -6,7 +6,8 @@
 				`active` = 1
 				WHERE `hash` = '".mres(($_GET['hash']))."'
 		");
-		$_SESSION['info'] = "Поздравляем! Вы зарегистрировались!";
+		$_SESSION['info'] = 'Поздравляем, вы зарегистрировались!'.'</br>'. 
+		'Тепер можете '.'<a href="index.php?module=cabinet&page=authorization">войти на сайт</a>';
 	}
 
 	//Вывод информации
