@@ -1,4 +1,6 @@
 <?php 
+Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/story.css" media="screen"  />';
+
 	$story_edit = my_query("SELECT * FROM `story` WHERE `id` = ".(int)$_GET['id']." LIMIT 1");
 	
 	if (!mysqli_num_rows($story_edit)) {
@@ -29,3 +31,4 @@
 			$story_error = "Все поля обязательные для заполнения!";
 		}
 	}
+?>	

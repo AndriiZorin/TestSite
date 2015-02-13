@@ -5,3 +5,16 @@ php_value mbstring.internal_encoding UTF-8
 php_flag magic_quotes_qpc Off
 php_flag magic_quotes_runtime Off
 php_flag register_globals Off
+
+RewriteEngine	on
+
+RewriteRUle ^admin/(.*) admin/index.php?route=$1 [L,QSA]
+
+RewriteCond %{REQUEST_URI} !^/admin
+RewriteCond %{REQUEST_URI} !^/forum
+RewriteCond %{REQUEST_URI} !^/ckeditor
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]

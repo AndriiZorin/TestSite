@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>LoveStory</title>
-	<link rel="stylesheet" href="./css/index.css" media="screen"  />
-	<link rel="stylesheet" href="./css/story.css" media="screen"  />
-	<link rel="stylesheet" href="./css/review.css" media="screen"  />
-	<link rel="stylesheet" href="./css/cabinet.css" media="screen" />
-	<link rel="stylesheet" href="./css/universal.css" media="screen" />
+	<title><?php echo hsc(Core::$META['title']); ?></title>
+	<link rel="stylesheet" href="./skins/default/css/style.css" media="screen"  />
+	<link rel="stylesheet" href="./skins/default/css/spec.css" media="screen" />
+
+	<!--Including CSS and JS files-->
+	<?php if(count(Core::$CSS)) { echo implode("\n", Core::$CSS);} ?>
+	<?php if(count(Core::$JS)) { echo implode("\n", Core::$JS);} ?>
 </head>
 <body>
 
@@ -31,22 +32,23 @@
 	</div>	
 
 	<div class="content">
-		<!--Переключение между страницами-->
+		<!--Switch beetwen pages-->
 		<?php 	include $_GET['module'].'/'.$_GET['page'].'.tpl';?>	 
 	</div>  
 
 	<div class="footer"> 
 		<div class="footer_bar"></div>
 		<div class="footer_copyright">
-			<!--Копирайт-->
+			<!--Copyright-->
 			<?php
-				if (COPYRIGHT == CURRENT_YEAR) {
-					echo "&copy; ".COPYRIGHT." ";
+				if (Core::$COPYRIGHT == date("Y")) {
+					echo "&copy; ".Core::$COPYRIGHT." ";
 				} else {
-					echo "&copy; ".COPYRIGHT ." - ".CURRENT_YEAR." ";
+					echo "&copy; ".Core::$COPYRIGHT ." - ".date("Y")." ";
 				}
 			 ?>	
 		</div>
 	</div>
+
 </body>
 </html>

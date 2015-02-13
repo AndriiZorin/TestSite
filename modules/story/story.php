@@ -1,4 +1,6 @@
 <?php 
+Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/story.css" media="screen"  />';
+ 
 	//Вывод отзывов на страницу
 	$story_show = my_query("SELECT * FROM `story` ORDER BY `id` DESC");	
 
@@ -19,3 +21,4 @@
 		$info = $_SESSION['info'];
 		unset($_SESSION['info']);
 	} 
+?>	

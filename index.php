@@ -3,16 +3,16 @@ error_reporting(-1);
 ini_set('display_errors',1);
 header('Content-Type: text/html; charset=utf-8');
 session_start();
-// Конфиг сайтa
-include_once './global.php'; //Глобальные перменные
-include_once './variables.php'; //Переменные которые будут изменяться
-//Классы и функции
-include_once './lib/functions.php'; //Функции
-//Подключение к БД
-$link = mysqli_connect(DB_LOCAL, DB_LOGIN, DB_PASS, DB_NAME);
+// Configuration
+include_once './global.php'; //Global variables
+include_once './variables.php'; //Changing variables
+//f\Functions
+include_once './lib/functions.php'; 
+//Connect to DB
+$link = mysqli_connect(Core::$DB_LOCAL, Core::$DB_LOGIN, Core::$DB_PASS, Core::$DB_NAME);
 mysqli_set_charset($link,'utf8');
-//Главный тпл-файл и рабочие модули
+//Working modules
 include './modules/allpage.php';
 include './modules/'.$_GET['module'].'/'.$_GET['page'].'.php';
-include './skins/index.tpl';
+include './skins/default/index.tpl';
 ?>

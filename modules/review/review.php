@@ -1,4 +1,6 @@
 <?php 
+Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/review.css" media="screen"  />';
+
 	//Вывод отзывов на страницу
 	$review = my_query("
 		SELECT * FROM `review` ORDER BY `date` DESC
@@ -49,3 +51,4 @@
 	if (isset($_SESSION['info'])) {
 		$info = $_SESSION['info'];
 	} 
+?>	

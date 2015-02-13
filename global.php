@@ -1,11 +1,17 @@
 <?php  
-define('COPYRIGHT',2014);
-//Date
-define('CURRENT_YEAR',date("Y"));
-define('CURRENT_FULL_DATE',date("Y-m-d H:i:s"));
-//Database
-define('DB_LOCAL','localhost');
-define('DB_LOGIN','admin');
-define('DB_PASS','admin');
-define('DB_NAME','main');
-define('DOMAIN', 'http://localhost/LoveStory');
+class Core {
+	static $COPYRIGHT = 2014;
+	static $SCIN = 'default';
+	static $DB_LOCAL = 'localhost';
+	static $DB_LOGIN = 'admin';
+	static $DB_PASS = 'admin';
+	static $DB_NAME = 'main';
+	static $DOMAIN = 'http://localhost/LoveStory/';
+	static $META = array (
+		'title' => 'LoveStory',
+		'keywords' => 'k',
+		'description' => 'Love as she is'
+	);
+	static $CSS = array ();
+	static $JS = array ();	
+}
