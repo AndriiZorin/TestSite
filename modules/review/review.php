@@ -1,5 +1,5 @@
 <?php 
-Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/review.css" media="screen"  />';
+Core::$CSS[] = '<link rel="stylesheet" href="/skins/default/css/review.css" media="screen"  />';
 
 	//Вывод отзывов на страницу
 	$review = my_query("
@@ -18,7 +18,7 @@ Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/review.css" med
 			");	
 			//Создаем сессию об успешном добавлении отзыва
 			$_SESSION['info'] = "Ваш отзыв успешно добавлен!";
-			header("Location: index.php?module=review&page=review");
+			header("Location: /review/review");
 			exit();
 		}  else {
 			$error_review = "Поле 'отзыв' пустое!";
@@ -43,7 +43,7 @@ Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/review.css" med
 		");
 
 		$_SESSION['info'] = "Отзывы удалены!";
-		header("Location: index.php?module=review&page=review");
+		header("Location: /review/review");
 		exit();
 	}
 

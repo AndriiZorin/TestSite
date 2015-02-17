@@ -1,5 +1,5 @@
 <?php
-Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/cabinet.css" media="screen" />';
+Core::$CSS[] = '<link rel="stylesheet" href="/skins/default/css/cabinet.css" media="screen" />';
 
 	if(isset($_POST['submit_reg']) && !empty($_POST['submit_reg'])) {
 		if (isset($_POST['email'], $_POST['login'], $_POST['password'])) {
@@ -62,11 +62,11 @@ Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/cabinet.css" me
 				Mail::$subject = "Регистрация на LoveStory";
 				Mail::$text = 
 					'Пройдите по ссылке для завершения регистрации '		
-					.Core::$DOMAIN.'index.php?module=cabinet&page=info&id='.$id.'&hash='.my_crypt($_POST['login']).'';
+					.Core::$DOMAIN.'/cabinet/info?id='.$id.'&hash='.my_crypt($_POST['login']).'';
 				Mail::send();
 
 				$_SESSION['info'] = 'На вашу почту выслано письмо для активации акаунта!';
-	 			header("Location: index.php?module=cabinet&page=info");
+	 			header("Location: /cabinet/info");
 				exit();
 			}
 		}

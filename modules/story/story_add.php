@@ -1,5 +1,5 @@
 <?php 
-Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/story.css" media="screen"  />';
+Core::$CSS[] = '<link rel="stylesheet" href="/skins/default/css/story.css" media="screen"  />';
 
 	if (isset($_POST['submit_form']) && !empty($_POST['submit_form'])) {
 		if ( isset($_POST['title'], $_POST['text'], $_POST['description']) && !empty($_POST['title']) && !empty($_POST['text']) && !empty($_POST['description'])) {
@@ -12,7 +12,7 @@ Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/story.css" medi
 			");
 
 			$_SESSION['info'] = "История успешно добавлена!";
-			header("Location: index.php?module=story&page=story");
+			header("Location: /story/story");
 			exit();
 		} else {
 			$story_error = "Все поля обязательные для заполнения!";

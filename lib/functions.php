@@ -1,14 +1,11 @@
 <?php 
 //Шифровка пароля
-
 function my_crypt($var) {
 	$salt = "abc";
 	$salt2 = "zxc";
 	$var = crypt(md5($var.$salt),$salt2);
 	return $var;
 } 
-
-
 //Выводит расширенную инфомрацию об массиве
 function array_info($array, $stop = false) {
 	echo '<pre>'.print_r($array, 1).'</pre>';
@@ -36,13 +33,10 @@ function my_query($query) {
 		return $res;
 	}
 }
-
-
 //Автоматическое подключение классов
 function __autoload($class) {
 	include './lib/class_'.$class.'.php';
 }
-
 //Фильтрация вводимых данных
 function filter_int($num) {
 	if (!is_array($num)) {
@@ -53,7 +47,6 @@ function filter_int($num) {
 
 	return $num;
 }
-
 function filter_float ($num) {
 	if (!is_array($num)) {
 		$num = (float)($num);
@@ -62,7 +55,6 @@ function filter_float ($num) {
 	}
 	return $num;
 }
-
 function mres ($string) {
 	global $link;
 	if (!is_array($string)) {

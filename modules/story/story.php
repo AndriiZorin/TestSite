@@ -1,5 +1,5 @@
 <?php 
-Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/story.css" media="screen"  />';
+Core::$CSS[] = '<link rel="stylesheet" href="/skins/default/css/story.css" media="screen"  />';
  
 	//Вывод отзывов на страницу
 	$story_show = my_query("SELECT * FROM `story` ORDER BY `id` DESC");	
@@ -12,7 +12,7 @@ Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/story.css" medi
 		my_query("DELETE FROM `story`WHERE `id` IN (".$story_select.")");
 
 		$_SESSION['info'] = "История удалена!";
-		header("Location: index.php?module=story&page=story");
+		header("Location: /story/story");
 		exit();
 	}
 

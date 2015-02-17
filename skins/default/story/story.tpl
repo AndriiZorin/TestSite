@@ -12,7 +12,7 @@
 					<div id="story_delete"><input type="submit" name="story_delete" value="Удалить выбранные истории"></div>
 				</td>
 				<td>
-					<div id="story_add"><a href="index.php?module=story&page=story_add"><p>Добавить новую историю</p></a></div>
+					<div id="story_add"><a href="/story/story_add"><p>Добавить новую историю</p></a></div>
 				</td>
 			</tr>
 		</table>
@@ -30,7 +30,7 @@
 				</td>
 				<td>
 					<div id="story_edit">
-						<a href="index.php?module=story&page=story_edit&id=<?php echo $row['id'];?>">Редактировать историю</a>
+						<a href="/story/story_edit?id=<?php echo $row['id'];?>">Редактировать историю</a>
 					</div>	
 		</form>				
 				<?php }?>	

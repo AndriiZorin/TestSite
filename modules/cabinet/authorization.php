@@ -1,5 +1,5 @@
 <?php 
-Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/cabinet.css" media="screen" />';
+Core::$CSS[] = '<link rel="stylesheet" href="/skins/default/css/cabinet.css" media="screen" />';
 
 	//Авторизироваться на сайте заполнив форму
 	if (isset($_POST['submit_auth']) && !empty($_POST['submit_auth'])) {

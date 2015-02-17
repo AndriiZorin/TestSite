@@ -1,11 +1,11 @@
 <?php 
-Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/story.css" media="screen"  />';
+Core::$CSS[] = '<link rel="stylesheet" href="/skins/default/css/story.css" media="screen"  />';
 
 	$story_edit = my_query("SELECT * FROM `story` WHERE `id` = ".(int)$_GET['id']." LIMIT 1");
 	
 	if (!mysqli_num_rows($story_edit)) {
 		$_SESSION['info'] = "Данной записи не существует!";
-		header("Location: index.php?module=story&page=story");
+		header("Location: /story/story");
 		exit();
 	}
 
@@ -24,7 +24,7 @@ Core::$CSS[] = '<link rel="stylesheet" href="./skins/default/css/story.css" medi
 		");
 
 		$_SESSION['info'] = "История обновлена!";
-		header("Location: index.php?module=story&page=story");
+		header("Location: /story/story");
 		exit();
 
 		} else {
