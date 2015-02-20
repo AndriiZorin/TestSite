@@ -1,5 +1,5 @@
 <?php
-Core::$CSS[] = '<link rel="stylesheet" href="/skins/default/css/cabinet.css" media="screen" />';
+Core::$CSS[] = '<link rel="stylesheet" href="/skins/'.Core::$VIEW.'/css/cabinet.css" media="screen" />';
 
 	if(isset($_POST['submit_reg']) && !empty($_POST['submit_reg'])) {
 		if (isset($_POST['email'], $_POST['login'], $_POST['password'])) {

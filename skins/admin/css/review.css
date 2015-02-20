@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+.review_before_block {
+	color: #310066;
+	margin: 10px;
+	margin-left: 100px;
+	font-family: Verdana, Arial, Helvetica, sans-seriff;
+}
+.review {
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 15px;
+}
+
+.review_block {
+	border: 2px groove purple;
+	border-radius: 15px;
+	background-color: #ccccff;
+	width: 1100px;
+}
+#review_block_title {
+	margin-left: 10px;
+	margin-bottom: -15px;
+	font-size: 14px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#review_block_date {
+	color: #555;
+	margin-left: 10px;
+}
+#review_block_text {
+	padding: 5px;
+	padding-left: 20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#review_button_delete {
+	margin: 20px;
+	margin-left: 100px;
+}
+
+/* Форма добавления новго отзыва */
+
+.review_form {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 2px double #310066;
+	border-radius: 10px;
+	width: 40%;
+	color: #310066;
+}
+.review_form h3 {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* Для гостей сайта */
+
+.guest {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	height: 50px;
+	padding-top: 20px;
+	text-align: center;
+	background-color: #AFEEEE;
+	color: #310066;
+	font-size: 20px;
+	border: 2px double #310066;
+	border-radius: 10px;
+}

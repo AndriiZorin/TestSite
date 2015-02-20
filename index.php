@@ -13,11 +13,11 @@ $link = mysqli_connect(Core::$DB_LOCAL, Core::$DB_LOGIN, Core::$DB_PASS, Core::$
 mysqli_set_charset($link,'utf8');
 //Рабочие модули + вывод ошибок в контенте через обфускацию
 ob_start();
-	include './modules/allpage.php';
-	include './modules/'.$_GET['module'].'/'.$_GET['page'].'.php';
-	include './skins/'.Core::$skin.'/'.$_GET['module'].'/'.$_GET['page'].'.tpl';
+	include './'.Core::$APP.'/allpage.php';
+	include './'.Core::$APP.'/'.$_GET['module'].'/'.$_GET['page'].'.php';
+	include './skins/'.Core::$VIEW.'/'.$_GET['module'].'/'.$_GET['page'].'.tpl';
 	$ob_content = ob_get_contents();
 ob_end_clean();
 
-include './skins/'.Core::$skin.'/index.tpl';
+include './skins/'.Core::$VIEW.'/index.tpl';
 ?>

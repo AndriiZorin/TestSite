@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+.story {
+	margin: 40px;
+}
+
+.story_show {
+	margin-bottom: 30px;
+	border: 2px solid purple;
+	border-radius: 20px;
+	background-color: #eeeeff;
+}
+
+#story_show_title {
+	text-align: center;
+	font-size: 18px;
+	font-family: Gabriola, Arial, Helvetica, sans-serif;
+}
+#story_show_text {
+	padding-bottom: 50px;
+	padding-right: 50px;
+	padding-left: 50px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* --------------------------------------------
+ 	Кнопки
+*/---------------------------------------------
+.story_buttons {
+	margin: 2px;
+}
+
+#story_add {
+	margin-top: -20px;
+	margin-bottom: -20px;
+	text-align: center;
+	width: 300px;
+	border-radius: 10px;
+	background-color: #8b00ff;
+}
+
+#story_add a {
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#story_edit {
+	float: right;
+	text-align: center;
+	width: 260px;
+	border-radius: 10px;
+	background-color: #120a8f;
+}
+#story_edit a {
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/*  Для файлов story_add.tpl и story_edit.tpl */
+
+.story_form {
+	border: 1px solid black;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
+	width: 65%;
+	text-align: center;
+}

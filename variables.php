@@ -1,17 +1,28 @@
 <?php 
-	//ЧПУ
+	//CHPU
 	if (isset($_GET['route'])) {
 		$temp = explode('/', $_GET['route']);
+
+		//Include admin-panel
+		if ($temp[0] == 'admin') {
+			Core::$APP = Core::$APP.'/admin';
+			Core::$VIEW = 'admin';
+			unset($temp[0]);
+		}
+
+		//Include CHPU
+		$i = 0;
 		foreach ($temp as $k => $v) {
-			if ($k == 0) {
+			if ($i == 0) {
 				$_GET['module'] = $v;
-			} elseif($k == 1) {
+			} elseif($i == 1) {
 				if (!empty($v)) {
 					$_GET['page'] = $v;
 				}
 			} else {
 				$_GET['key'.($k-1)] = $v;
 			}
+			++$i;
 		}
 		unset($_GET['route']);
 	} 

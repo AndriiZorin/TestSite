@@ -1,6 +1,7 @@
 <?php  
 class Core {
-	static $skin = 'default';
+	static $APP = 'modules';
+	static $VIEW = 'default';
 	static $COPYRIGHT = 2014;
 	static $DB_LOCAL = 'localhost';
 	static $DB_LOGIN = 'admin';
