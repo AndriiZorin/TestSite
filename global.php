@@ -15,4 +15,4 @@ class Core {
 	);
 	static $CSS = array ();
 	static $JS = array ();	
-}
+}	

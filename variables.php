@@ -14,7 +14,9 @@
 		$i = 0;
 		foreach ($temp as $k => $v) {
 			if ($i == 0) {
-				$_GET['module'] = $v;
+				if (!empty($v)) {
+					$_GET['module'] = $v;
+				}	
 			} elseif($i == 1) {
 				if (!empty($v)) {
 					$_GET['page'] = $v;
@@ -25,13 +27,14 @@
 			++$i;
 		}
 		unset($_GET['route']);
-	} 
+	}
+
 	//Регистрация существубщий модулей
 	$allowed = array ('home', 'story', 'review', 'cabinet');
 	if(!isset($_GET['module']) || !isset($_GET['page'])) {
 		$_GET['module'] = 'home';
 		$_GET['page'] = 'home';
-	} elseif(!in_array($_GET['module'], $allowed)) {
+	} elseif(!in_array($_GET['module'], $allowed) && Core::$VIEW != 'admin') {
 		header("Location: /error/404");
 		exit();
 	}

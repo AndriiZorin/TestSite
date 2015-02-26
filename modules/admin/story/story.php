@@ -1,6 +1,7 @@
 <?php 
-Core::$CSS[] = '<link rel="stylesheet" href="/skins/'.Core::$VIEW.'/css/story.css" media="screen"  />';
- 
+ if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {
+ 	Core::$CSS[] = '<link rel="stylesheet" href="/skins/'.Core::$VIEW.'/css/story.css" media="screen"  />';
+
 	//Вывод отзывов на страницу
 	$story_show = my_query("SELECT * FROM `story` ORDER BY `id` DESC");	
 
@@ -12,7 +13,7 @@ Core::$CSS[] = '<link rel="stylesheet" href="/skins/'.Core::$VIEW.'/css/story.cs
 		my_query("DELETE FROM `story`WHERE `id` IN (".$story_select.")");
 
 		$_SESSION['info'] = "История удалена!";
-		header("Location: /story/story");
+		header("Location: /admin/story/story");
 		exit();
 	}
 
@@ -21,4 +22,7 @@ Core::$CSS[] = '<link rel="stylesheet" href="/skins/'.Core::$VIEW.'/css/story.cs
 		$info = $_SESSION['info'];
 		unset($_SESSION['info']);
 	} 
-?>	
+} else {
+	header('Location /admin/home/home');
+	exit("У вас нету прав доступа к этой странице");
+}	

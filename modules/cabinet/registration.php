@@ -71,4 +71,3 @@ Core::$CSS[] = '<link rel="stylesheet" href="/skins/'.Core::$VIEW.'/css/cabinet.
 			}
 		}
 	} 
-?>

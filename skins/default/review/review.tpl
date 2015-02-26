@@ -6,51 +6,31 @@
 	Отзывов на странице: <?php echo mysqli_num_rows($review) ?>
 </div>
 
-
-<!--Разрешаем доступ к особым функциям сайта-->
-<?php    if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {  ?>
-	<form action="" method="post">
-	    <div id="review_button_delete">
-			<input type="submit" name="review_button_delete" value="Удалить выбранные отзывы">
-		</div>
-<?php }?>
-
 <!--Вывод существующих отзывов-->
 <?php if(mysqli_num_rows($review)) { while  ($row = mysqli_fetch_assoc($review)) { ?>
 	<div class="review">
-			<table>
-			 <tr>
-			 	<!--Разрешаем доступ к особым функциям сайта-->
-			 	<?php  if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {?>
-			 		<td>
-						<div id="review_select">
-							<input type="checkbox" name="review_select[]" value="<?php echo $row['id'];?>">
+		<table>
+			<tr>
+				 <td>
+					<div class="review_block">
+						<div id="review_block_title">
+							<h4>
+								<?php  echo $row['username']; ?>  
+								<span id="review_block_date"><?php  echo $row['date']; ?></span>
+							</h4>
 						</div>
-					</td>
-				<?php } ?>
-
-				 	<td>
-						<div class="review_block">
-							<div id="review_block_title">
-								<h4>
-									<?php  echo $row['username']; ?>  
-									<span id="review_block_date"><?php  echo $row['date']; ?></span>
-								</h4>
-							</div>
-							<div id="review_block_text">
-								<?php echo $row['review']; ?>
-							</div>
+						<div id="review_block_text">
+							<?php echo $row['review']; ?>
 						</div>
-					</td>
-				</tr>
-			</table>
-		</div>
-</form>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
 <?php  
 	}
 } 
 ?>
-
 <!--Форма отрпавки отзыва только для зареганых юзеров-->
 <?php  if (isset($_SESSION['user'])) { ?>
 	<div class="review_form">

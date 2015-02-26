@@ -30,25 +30,3 @@ Core::$CSS[] = '<link rel="stylesheet" href="/skins/'.Core::$VIEW.'/css/review.c
 		$info = $_SESSION['info'];
 		unset($_SESSION['info']);
 	} 
-
-	//Множественное удаление
-	if (isset($_POST['review_button_delete']) && !empty($_POST['review_button_delete'])) {
-	
-		filter_int($_POST['review_select']);
-		$review_select = implode(", ", $_POST['review_select']);
-
-		my_query("
-			DELETE FROM `review`
-			WHERE `id` IN (".$review_select.")
-		");
-
-		$_SESSION['info'] = "Отзывы удалены!";
-		header("Location: /review/review");
-		exit();
-	}
-
-		unset($_SESSION['info']);
-	if (isset($_SESSION['info'])) {
-		$info = $_SESSION['info'];
-	} 
-?>	
