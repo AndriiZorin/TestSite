@@ -11,12 +11,12 @@
 	background-color: #eeeeff;
 }
 
-#story_show_title {
+#story_title {
 	text-align: center;
 	font-size: 18px;
 	font-family: Gabriola, Arial, Helvetica, sans-serif;
 }
-#story_show_text {
+#story_text {
 	padding-bottom: 50px;
 	padding-right: 50px;
 	padding-left: 50px;

@@ -4,11 +4,12 @@
 		<table>		
 			<tr>
 				<div class="story_show"> 
-					<div id="story_show_title">
+					<div id="story_title">
 						<h1><?php echo hsc($row['title']); ?></h1>
 					</div>
-					<div id ="story_show_text">
-						<?php echo hsc($row['text']); ?>
+					<div id ="story_text">
+						<?php echo hsc($row['description']); ?> 
+						<a href="/story/story_single">читать далее...</a>
 					</div>
 				</div>			
 				</td>
