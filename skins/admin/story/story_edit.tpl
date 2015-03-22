@@ -3,7 +3,7 @@
 	<table>
 		<tr>
 			<td> 
-				<div>Заголовок истории</div>
+				Заголовок истории
 				<input type="text" name="title" SIZE=130 value="<?php echo hsc($row ['title']); ?>">
 			</td>
 		</tr>

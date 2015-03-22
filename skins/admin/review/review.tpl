@@ -26,11 +26,11 @@
 						<div id="review_block_title">
 							<h4>
 								<?php  echo $row['username']; ?>  
-									<span id="review_block_date"><?php  echo $row['date']; ?></span>
+								<span id="review_block_date"><?php  echo $row['date']; ?></span>
 							</h4>
 						</div>
 						<div id="review_block_text">
-							<?php echo $row['review']; ?>
+							<?php echo hsc($row['review']); ?>
 						</div>
 					</div>
 				</td>

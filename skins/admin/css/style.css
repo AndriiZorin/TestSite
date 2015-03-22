@@ -56,14 +56,15 @@ body {
 .nav {
 	float: right;
 	margin-top: 140px; 
-	margin-right: -200px;
 	text-align:center;
+
 }
 
 #nav_button {
-	margin-left:40px;
 	float:left;
-	width: 120px; 
+	margin-left:50px;
+	padding-right: 10px;
+	padding-left: 10px;
 	height: 30px;
 	border-radius: 10px;
 	border: 1px solid #e2e2e2;
@@ -72,8 +73,9 @@ body {
 }
 #nav_button_back {
 	float: left;
-	margin-right:550px;
-	width: 220px; 
+	margin-right: 50px;
+	padding-right: 10px;
+	padding-left: 10px;
 	height: 30px;
 	border-radius: 10px;
 	border: 1px solid #e2e2e2;

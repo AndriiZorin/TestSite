@@ -30,7 +30,7 @@
 	}
 
 	//Reg exicts modules
-	$allowed = array ('home', 'story', 'review', 'cabinet');
+	$allowed = array ('home', 'story', 'review', 'cabinet', 'user');
 	if(!isset($_GET['module']) || !isset($_GET['page'])) {
 		$_GET['module'] = 'home';
 		$_GET['page'] = 'home';

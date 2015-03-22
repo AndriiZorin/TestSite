@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+
+.user {
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.user_single {
+	text-align: left;
+	padding: 20px;
+	border: 2px solid purple;
+}
+
+#user_field {
+	padding: 5px;
+	padding-right: 15px;
+	margin-right: 20px;
+	border: 1px solid purple;
+}
