@@ -9,6 +9,7 @@
 
 .user_single {
 	text-align: left;
+	margin-top: 20px;
 	padding: 20px;
 	border: 2px solid purple;
 }

@@ -7,6 +7,7 @@ session_start();
 include_once './global.php'; //Global variables
 include_once './variables.php'; //Changing variables
 include_once './lib/functions.php'; //Functions
+
 //Connect to DB
 $link = mysqli_connect(Core::$DB_LOCAL, Core::$DB_LOGIN, Core::$DB_PASS, Core::$DB_NAME); 
 mysqli_set_charset($link,'utf8');

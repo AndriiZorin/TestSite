@@ -4,7 +4,7 @@
 
 	if (isset($_POST['submit_form']) && !empty($_POST['submit_form'])) {
 		if ( isset($_POST['title'], $_POST['text'], $_POST['description']) && !empty($_POST['title']) && !empty($_POST['text']) && !empty($_POST['description'])) {
-				
+	
 			my_query(
 				"INSERT INTO `story` SET
 				`title` 		 = '".mres($_POST['title'])."',
@@ -19,6 +19,11 @@
 			$story_error = "Все поля обязательные для заполнения!";
 		}
 	}
+	//Убиваем сессию о инофрмации страницы
+	if (isset($_SESSION['info'])) {
+		$info = $_SESSION['info'];
+		unset($_SESSION['info']);
+	} 
 } else {
 	header('Location /admin/home/home');
 	exit("У вас нету прав доступа к этой странице");

@@ -20,7 +20,7 @@
 				<?php  if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) { ?>
 					<div id="nav_button"><a href="/admin/story/story">Истории</a></div>
 					<div id="nav_button"><a href="/admin/review/review">Отзывы</a></div>
-					<div id="nav_button"><a href="/admin/user/user">Пользователи</a></div>
+					<div id="nav_button"><a href="/admin/member/member">Пользователи</a></div>
 				<?php } ?>
 			</div>
 		</div> 

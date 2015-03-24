@@ -1,8 +1,8 @@
 <?php
 class Mail {
 	static $subject = 'Default';
-	static $from = 'admin@lovestory@mail.zz.mu';
-	static $to = 'admin@lovestory@mail.zz.mu';
+	static $from = 'admin@lovestory.zz.mu';
+	static $to = 'admin@lovestory.zz.mu';
 	static $text = 'Some text';
 	static $header = '';
 
