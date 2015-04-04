@@ -1,15 +1,13 @@
 <div class="story_picture">
 	<!--Вывод об  добавлениее картинки на сайт-->
 	<?php  if (isset($info))  { echo '<h2>'.$info.'</h2>'; } ?>
-	<form action="" method="post" enctype="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data">
 		Выбрать изображение <input type="file"  name="file"> 
-		<input type="submit" name="sumbit_upload_img" value="Добавить изображение">
 		<div id="redtext"><?php echo @$img_error; ?></div>
-	</form>
+	
 </div>
 
 <div class="story_form">
-	<form action="" method="post">
 		<table >
 			<tr>
 				<td> 
@@ -34,5 +32,5 @@
 			</tr>
 		</table>
 		<input type="submit" name="submit_form" value="Добавить историю">
-	</form>
+</form>
 </div>

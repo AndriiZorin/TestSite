@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
 .story {
-	margin: 40px;
+	margin: 20px;
 }
-
 .story_show {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
 	margin-bottom: 30px;
 	border: 2px solid purple;
 	border-radius: 20px;
@@ -21,4 +23,9 @@
 	padding-right: 50px;
 	padding-left: 50px;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#story_img {
+	text-align: center;
+	margin-top: 20px;
 }
