@@ -14,13 +14,12 @@ function array_info($array, $stop = false) {
 	}
 };
 //Расширеная версия mysqli_query
-function my_query($query) {
-	global $link;
-	$res = mysqli_query($link, $query);
+function my_query($query, $key = 0) {
+	$res = DB::_($key)->query($query);
 	$info = debug_backtrace();
 	if ($res === false) {
 		$error = "query: ".$query."<br>\n".
-			"error: ".mysqli_error($link)."<br>\n".
+			"error: ".mysqli_error($link)."<br>\n".DB::_($key)->error."<br>\n".
 			"file: ".$info[0]['file']."<br>\n".
 			"line: ".$info[0]['line']."<br>\n".
 			"date: ".date("H:i d-m-Y")."<br>\n".
@@ -55,10 +54,9 @@ function filter_float ($num) {
 	}
 	return $num;
 }
-function mres ($string) {
-	global $link;
+function mres ($string, $key = 0) {
 	if (!is_array($string)) {
-		$string = mysqli_real_escape_string($link, $string);
+		$string = DB::_($key)->real_escape_string($string);
 	} else {
 		$string = array_map('filter_string', $string);
 	}

@@ -29,12 +29,33 @@
 		unset($_GET['route']);
 	}
 
-	//Reg exicts modules
-	$allowed = array ('home', 'story', 'review', 'cabinet', 'member');
-	if(!isset($_GET['module']) || !isset($_GET['page'])) {
+	//Access to exicts modules
+	if(!isset($_GET['module'])) {
 		$_GET['module'] = 'home';
+	} else {
+		$res = my_query("
+			SELECT *
+			FROM `page`
+			WHERE `module` = '".mres($_GET['module'])."'
+		");
+		if (!$res->num_rows) {
+			header("Location: /error/404");
+			exit("ERROR");
+		} else {
+			$staticpage = $res->fetch_assoc();
+			if ($staticpage['static'] == 1) {
+				$_GET['module'] = 'static';
+				$_GET['page'] = 'static_main';
+			}
+		}	
+	}
+
+	//Access to exicts pages
+	if (!isset($_GET['page'])) {
 		$_GET['page'] = 'home';
-	} elseif(!in_array($_GET['module'], $allowed) && Core::$VIEW != 'admin') {
+	}
+
+	if (!preg_match('#^[a-z-_]*$#iu', $_GET['page'])) {
 		header("Location: /error/404");
 		exit();
 	}

@@ -4,13 +4,13 @@ if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {
 
 	$story_edit = my_query("SELECT * FROM `story` WHERE `id` = ".(int)$_GET['id']." LIMIT 1");
 		
-	if (!mysqli_num_rows($story_edit)) {
+	if (!$story_edit->num_rows) {
 		$_SESSION['info'] = "Данной записи не существует!";
 		header("Location: /admin/story/story");
 		exit();
 	}
 
-	$row = mysqli_fetch_assoc($story_edit);
+	$row = $story_edit->fetch_assoc();
 
 	if (isset($_POST['submit_form']) && !empty($_POST['submit_form'])) {
 		if (isset($_POST['title'], $_POST['text'], $_POST['description']) && !empty($_POST['title']) && !empty($_POST['text']) && !empty($_POST['description'])) {

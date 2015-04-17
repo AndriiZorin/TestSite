@@ -12,8 +12,8 @@ Core::$CSS[] = '<link rel="stylesheet" href="/skins/'.Core::$VIEW.'/css/cabinet.
 				LIMIT 1
 			");
 
-			if (mysqli_num_rows($res)) {
-				$_SESSION['user'] = mysqli_fetch_assoc($res);
+			if ($res->num_rows) {
+				$_SESSION['user'] = $res->fetch_assoc();
 				$status = 'ok';
 			} else {
 				$errors = "Пользователь не существует ".'</br>'."либо пароль был введён не верно";

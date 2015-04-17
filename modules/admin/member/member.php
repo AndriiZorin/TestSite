@@ -11,7 +11,7 @@ if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {
 			");
 
 		$_SESSION['search_user'] = mres($_POST['search']);
-		$row = mysqli_fetch_assoc($user);
+		$row = $user->fetch_assoc();
 
 		if (isset($row['login'])) {
 			$_SESSION['info'] = "Показан пользователь с логином: ".$_POST['search'];

@@ -17,7 +17,7 @@
 	</table>
 
 	<!--Вывод всех историй из БД-->
-	<?php if(mysqli_num_rows($story_show)) { while  ($row = mysqli_fetch_assoc($story_show)) { ?>
+	<?php if($story_show->num_rows) { while  ($row = $story_show->fetch_assoc()) { ?>
 		<table>
 			<tr>
 				</td>	

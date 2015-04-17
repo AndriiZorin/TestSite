@@ -29,7 +29,7 @@ Core::$CSS[] = '<link rel="stylesheet" href="/skins/'.Core::$VIEW.'/css/cabinet.
 					WHERE `login` = '".mres($_POST['login'])."'
 					LIMIT 1
 				");
-				if (mysqli_num_rows($res)) {
+				if ($res->num_rows) {
 					$errors['login'] = "такой логин уже занят";
 				}
 
@@ -39,7 +39,7 @@ Core::$CSS[] = '<link rel="stylesheet" href="/skins/'.Core::$VIEW.'/css/cabinet.
 					WHERE `email` = '".mres($_POST['email'])."'
 					LIMIT 1
 				");
-				if (mysqli_num_rows($res)) {
+				if ($res->num_rows) {
 					$errors['email'] = "такой email уже существует";
 				}
 			}
@@ -55,7 +55,7 @@ Core::$CSS[] = '<link rel="stylesheet" href="/skins/'.Core::$VIEW.'/css/cabinet.
 					`hash`	   = '".my_crypt($_POST['login'], $_POST['age'])."'
 				");
 
-				$id = mysqli_insert_id($link);
+				$id = DB::_($key)->insert_id;
 
 				//Отправка письма для подтверждения регистрации
 				Mail::$to = $_POST['email'];

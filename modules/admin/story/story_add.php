@@ -1,5 +1,5 @@
 <?php 
- if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {
+if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {
 	Core::$CSS[] = '<link rel="stylesheet" href="/skins/'.Core::$VIEW.'/css/story.css" media="screen"  />';
 
 	//Upload logo for story

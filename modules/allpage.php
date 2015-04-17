@@ -5,7 +5,7 @@
 			WHERE `id` = '".$_SESSION['user']['id']."'
 			LIMIT 1 
 		");
-		$_SESSION['user'] = mysqli_fetch_assoc($res);
+		$_SESSION['user'] = $res->fetch_assoc();
 		if ($_SESSION['user']['active'] != 1) {
 			header("Location: /cabinet/exit");
 			exit();

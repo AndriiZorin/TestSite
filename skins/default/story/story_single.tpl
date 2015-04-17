@@ -1,4 +1,4 @@
-<?php $row = mysqli_fetch_assoc($story_show); ?>
+<?php $row = $story_show->fetch_assoc(); ?>
 <div class="story">
 	<div class="story_show">
 		<div id="story_img">

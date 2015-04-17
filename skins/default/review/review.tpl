@@ -3,11 +3,11 @@
 	<?php  if (isset($info)) {  echo '<p>'.$info.'</p>';  } ?>
 
 	<!--Вывод оОбщего количества отзывов-->
-	Отзывов на странице: <?php echo mysqli_num_rows($review) ?>
+	Отзывов на странице: <?php echo $review->num_rows ?>
 </div>
 
 <!--Вывод существующих отзывов-->
-<?php if(mysqli_num_rows($review)) { while  ($row = mysqli_fetch_assoc($review)) { ?>
+<?php if($review->num_rows) { while  ($row = $review->fetch_assoc()) { ?>
 	<div class="review">
 		<table>
 			<tr>

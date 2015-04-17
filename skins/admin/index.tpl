@@ -2,7 +2,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Admin panel LoveStory</title>
-	<link rel="stylesheet" href="/skins/admin/css/style.css" media="screen"  />
+	<link rel="stylesheet" href="/skins/<?php echo Core::$VIEW; ?>/css/style.css" media="screen"  />
 	<!--Including CSS files-->
 	<?php if(count(Core::$CSS)) { echo implode("\n", Core::$CSS);} ?>
 </head>

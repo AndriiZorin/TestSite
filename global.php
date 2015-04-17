@@ -10,7 +10,7 @@ class Core {
 	static $DOMAIN = 'http:/Lovestory.com/';
 	static $META = array (
 		'title' => 'LoveStory',
-		'keywords' => 'k',
+		'keywords' => 'love, story, romantic',
 		'description' => 'Love as she is'
 	);
 	static $CSS = array ();

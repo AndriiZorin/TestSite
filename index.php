@@ -5,15 +5,16 @@ header('Content-Type: text/html; charset=utf-8');
 session_start();
 
 include_once './global.php'; //Global variables
-include_once './variables.php'; //Changing variables
 include_once './lib/functions.php'; //Functions
+include_once './variables.php'; //Changing variables
 
-//Connect to DB
-$link = mysqli_connect(Core::$DB_LOCAL, Core::$DB_LOGIN, Core::$DB_PASS, Core::$DB_NAME); 
-mysqli_set_charset($link,'utf8');
-//Рабочие модули + вывод ошибок в контенте через обфускацию
+//Include working module + output errors
 ob_start();
 	include './'.Core::$APP.'/allpage.php';
+	if (!file_exists('./'.Core::$APP.'/'.$_GET['module'].'/'.$_GET['page'].'.php') || !file_exists('./skins/'.Core::$VIEW.'/'.$_GET['module'].'/'.$_GET['page'].'.tpl')) {
+		header("Location: /error/404");
+		exit();
+	}
 	include './'.Core::$APP.'/'.$_GET['module'].'/'.$_GET['page'].'.php';
 	include './skins/'.Core::$VIEW.'/'.$_GET['module'].'/'.$_GET['page'].'.tpl';
 	$ob_content = ob_get_contents();
