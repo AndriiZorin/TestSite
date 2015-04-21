@@ -8,31 +8,32 @@
 	<table>
 		<tr>
 			<td>
-				<div id="story_delete"><input type="submit" name="story_delete" value="Удалить выбранные истории"></div>
-			</td>
-			<td>
 				<div id="story_add"><a href="/admin/story/story_add"><p>Добавить новую историю</p></a></div>
 			</td>
 		</tr>
 	</table>
-
+</form>	
 	<!--Вывод всех историй из БД-->
 	<?php if($story_show->num_rows) { while  ($row = $story_show->fetch_assoc()) { ?>
 		<table>
 			<tr>
-				</td>	
-					<div id="story_select">
-						<input type="checkbox" name="story_select[]" value="<?php echo $row['id'];?>">
-					</div>	
-				</td>
 				<td>
+					<div id="story_delete">
+						<a href="/admin/story/story?action=delete&id=<?php echo $row['id'];?>">Удалить историю</a>
+					</div>	
 					<div id="story_edit">
 						<a href="/admin/story/story_edit?id=<?php echo $row['id'];?>">Редактировать историю</a>
 					</div>	
-</form>				
+
 					<div class="story_show"> 
 						<div id="story_show_title">
 							<h1><?php echo hsc($row['title']); ?></h1>
+						</div>
+						<div id ="story_show_text">
+							<i>
+								<b>Краткое описание</b></br>
+								<p><?php echo hsc($row['description']); ?></p>
+							</i>
 						</div>
 						<div id ="story_show_text">
 							<?php echo hsc($row['text']); ?>

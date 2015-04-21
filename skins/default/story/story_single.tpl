@@ -9,6 +9,10 @@
 		</div>
 		<div id="story_text">
 			<?php echo hsc($row['text']); ?> 
+			<div id="story_single">
+				<a href="/story/story/>">&larr;вернуться к списку историй</a>
+			</div>
 		</div>
+
 	</div>
 </div>

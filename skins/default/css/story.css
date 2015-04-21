@@ -16,6 +16,7 @@
 #story_title {
 	text-align: center;
 	font-size: 18px;
+	color: #dd00cc;	
 	font-family: Gabriola, Arial, Helvetica, sans-serif;
 }
 #story_text {
@@ -24,7 +25,13 @@
 	padding-left: 50px;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
-
+#story_single {
+	text-align: right;
+}
+#story_single a{
+	color: #dd0099;	
+	text-decoration: none;
+}
 #story_img {
 	text-align: center;
 	margin-top: 20px;

@@ -8,7 +8,9 @@
 		</div>
 		<div id ="story_text">
 			<?php echo hsc($row['description']); ?> 
-			<a href="/story/story_single?id=<?php echo $row['id'];?>"> ... </a>
+			<div id="story_single">
+				<a href="/story/story_single?id=<?php echo $row['id'];?>">читать историю полностью&#10168;</a>
+			</div>
 		</div>
 	</div>			
 	<?php  	}	} ?>

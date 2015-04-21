@@ -15,11 +15,14 @@
 	<div class="header">
 		<div class="cab">
 			<?php  if (isset($_SESSION['user'])) { ?>
-			<div id="cab_login">Ваш логин: <span id="LoveStory"><?php echo $_SESSION['user']['login']; ?></span></div>
-			<div id="cab_login"><a href="/cabinet/exit">[ Выход ]</a></div>
+				<div id="cab_login">Ваш логин: <span id="LoveStory"><?php echo $_SESSION['user']['login']; ?></span></div>
+				<div id="cab_login"><a href="/cabinet/exit">[ Выход ]</a></div>
+				<?php  if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) { ?>
+					<div id="cab_button"><a href="/admin">Войти в админ-панель</a></div>
+				<?php } ?>
 			<?php } else { ?>
-			<div id="cab_button"><a href="/cabinet/authorization">Войти на сайт</a></div>
-			<div id="cab_button"><a href="/cabinet/registration">Создать акаунт</a></div>	
+				<div id="cab_button"><a href="/cabinet/authorization">Войти на сайт</a></div>
+				<div id="cab_button"><a href="/cabinet/registration">Создать акаунт</a></div>	
 			<?php } ?>
 		</div>
 		<div id="header_center"> 
@@ -47,7 +50,7 @@
 				} else {
 					echo "&copy; ".Core::$COPYRIGHT ." - ".date("Y")." ";
 				}
-			 ?>	
+			 ?>	Андрей Зорин
 		</div>
 	</div>
 

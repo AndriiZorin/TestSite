@@ -6,11 +6,8 @@ if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {
 	$story_show = my_query("SELECT * FROM `story` ORDER BY `id` DESC");	
 
 	//Множественное удаление
-	if (isset($_POST['story_delete']) && !empty($_POST['story_delete'])) {
-		filter_int($_POST['story_select']);
-		$story_select = implode(", ", $_POST['story_select']);
-
-		my_query("DELETE FROM `story`WHERE `id` IN (".$story_select.")");
+	if (isset($_GET['action']) && $_GET['action'] == 'delete') {
+		my_query("DELETE FROM `story` WHERE `id` = ".$_GET['id']." ");
 
 		$_SESSION['info'] = "История удалена!";
 		header("Location: /admin/story/story");

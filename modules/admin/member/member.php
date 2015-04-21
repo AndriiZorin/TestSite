@@ -14,7 +14,7 @@ if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {
 		$row = $user->fetch_assoc();
 
 		if (isset($row['login'])) {
-			$_SESSION['info'] = "Показан пользователь с логином: ".$_POST['search'];
+			$_SESSION['info'] = "Показан пользователь с логином: ".'<span id="LoveStory">'.$_POST['search'].'</span>';
 		} else {
 			$user_error = "Такого пользователя не существует!";
 		} 

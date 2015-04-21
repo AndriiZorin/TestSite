@@ -1,5 +1,5 @@
+<!--добавлениее картинки на сайт-->
 <div class="story_picture">
-	<!--Вывод об  добавлениее картинки на сайт-->
 	<?php  if (isset($info))  { echo '<h2>'.$info.'</h2>'; } ?>
 <form action="" method="post" enctype="multipart/form-data">
 		Выбрать изображение <input type="file"  name="file"> 
@@ -10,27 +10,21 @@
 <div class="story_form">
 		<table >
 			<tr>
-				<td> 
-					Заголовок истории
-					<input type="text" SIZE=130 name="title">
-				</td>
+				<td align="right">Заголовок</td>
+				<td> <input type="text" SIZE=100 name="title"></td>
 			</tr>
 			<tr>
-				<td>
-					Краткое описание истории
-					<textarea rows="3" cols="100" name="description"></textarea>
-				</td>
+				<td align="right">Краткое описание</td>
+				<td><textarea rows="3" cols="130" name="description"></textarea></td>
 			</tr>
 			<tr>
-				<td>
-					История
-					<textarea rows="20" cols="100" name="text"></textarea>
-				</td>
+				<td align="right">История</td>
+				<td><textarea rows="20" cols="130" name="text"></textarea></td>
 			</tr>
 			<tr>
 				<td><span id="redtext"><?php echo @$story_error ?></span></td>
 			</tr>
 		</table>
-		<input type="submit" name="submit_form" value="Добавить историю">
+		<div style="text-align:center"><input type="submit" name="submit_form" value="Добавить историю"></div>
 </form>
 </div>

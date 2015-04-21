@@ -10,15 +10,15 @@ if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {
 	if (isset($_POST['submit_form']) && !empty($_POST['submit_form'])) {
 		if (isset($_POST['title'], $_POST['text'], $_POST['description']) && !empty($_POST['title']) && !empty($_POST['text']) && !empty($_POST['description'])) {
 			//Upload image
-			if ($_FILES['file']['size'] < 500 || $_FILES['file']['size'] > 5000000) {
-				$img_error = "Неподходящий размер файла!";
+			if ($_FILES['file']['size'] < 500 || $_FILES['file']['size'] > 500000) {
+				$img_error = "Неподходящий размер файла либо картинка не была выбрана!";
 			} else {
 				preg_match('#\.([a-z]+)$#iu', $_FILES['file']['name'], $matches);
 				if (isset($matches[1])) {
 					$matches[1] = mb_strtolower($matches[1]);
 
 					$temp = getimagesize($_FILES['file']['tmp_name']);
-					$name = './upload/story/'.date('Ymd').'img'.rand(10000, 99999).'.jpg';
+					$name = './../upload/story/'.date('Ymd').'img'.rand(10000, 99999).'.jpg';
 
 					if (!in_array($matches[1], $img_ext)) {
 						$img_error = "Неподходит расширение картинки!";
