@@ -2,7 +2,7 @@
 
 	<div id="redtext"><?php if (!isset($status) || $status != 'ok') {echo @$errors;  ?></div>
 
-	<h3>Авторизироваться</h3>
+	<h3>Авторизация</h3>
 	<form action="" method="post">
 	<div id="cab_form">
 		<table>

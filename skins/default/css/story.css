@@ -36,3 +36,24 @@
 	text-align: center;
 	margin-top: 20px;
 }
+
+/* Paginator */
+
+.paginator {
+	text-align: center;
+	padding: 3px;
+	margin: 3px;
+}
+.paginator a {
+	font-weight: bold;
+	color: #aa00ff;
+	text-decoration: none;
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #aa00ff;
+}
+
+.paginatir a:hover, .paginator a:active {
+	border: 1px solid #AAAAff;
+	color: #AAAAff;
+}

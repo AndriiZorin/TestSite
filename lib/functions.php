@@ -19,7 +19,7 @@ function my_query($query, $key = 0) {
 	$info = debug_backtrace();
 	if ($res === false) {
 		$error = "query: ".$query."<br>\n".
-			"error: ".mysqli_error($link)."<br>\n".DB::_($key)->error."<br>\n".
+			"error: ".mysqli_error(DB::_($key))."<br>\n".DB::_($key)->error."<br>\n".
 			"file: ".$info[0]['file']."<br>\n".
 			"line: ".$info[0]['line']."<br>\n".
 			"date: ".date("H:i d-m-Y")."<br>\n".

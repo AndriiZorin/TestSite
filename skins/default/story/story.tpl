@@ -1,5 +1,5 @@
 <div class="story">
-	<!--Вывод всех историй из БД-->
+	<!--Show all stories from BD-->
 	<?php if($story_show->num_rows) { while  ($row = $story_show->fetch_assoc()) { ?>
 	
 	<div class="story_show"> 
@@ -14,4 +14,17 @@
 		</div>
 	</div>			
 	<?php  	}	} ?>
+
+	<!--Paginator-->
+	<div class="paginator">
+	<?php
+	$story_total = $story_get->num_rows;
+	$page_num = 0;
+	while ($story_total > 0) {
+		$page_num++;
+		echo '<a href="/story/story?num='.$page_num.'">'.$page_num.'</a>'." ";
+		$story_total = $story_total - CORE::$LIMIT; 
+	}
+	?>
+	</div>
 </div>
