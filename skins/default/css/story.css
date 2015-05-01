@@ -28,10 +28,17 @@
 #story_single {
 	text-align: right;
 }
+
 #story_single a{
 	color: #dd0099;	
 	text-decoration: none;
 }
+
+#story_single a:hover, #story_single a:active{
+	color: #0033FF;	
+	  text-decoration: underline;
+}
+
 #story_img {
 	text-align: center;
 	margin-top: 20px;
@@ -53,7 +60,7 @@
 	border: 1px solid #aa00ff;
 }
 
-.paginatir a:hover, .paginator a:active {
+.paginator a:hover, .paginator a:active {
 	border: 1px solid #AAAAff;
 	color: #AAAAff;
 }

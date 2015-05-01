@@ -52,6 +52,7 @@ Core::$CSS[] = '<link rel="stylesheet" href="/skins/'.Core::$VIEW.'/css/cabinet.
 					`password` = '".my_crypt($_POST['password'])."',
 					`email`    = '".mres($_POST['email'])."',
 					`age` 	   = ".(int)$_POST['age'].",
+					`sex` 	   = '".mres($_POST['sex'])."',
 					`hash`	   = '".my_crypt($_POST['login'], $_POST['age'])."'
 				");
 

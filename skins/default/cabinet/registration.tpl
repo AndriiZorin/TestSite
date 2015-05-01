@@ -1,6 +1,6 @@
-	<div class="cabinet">
+<div class="cabinet">
 		<h3>Регистрация на <span id="LoveStory_style">LoveStory</span></h3>
-		<form action="" method="post">
+	<form action="" method="post">
 		<div id="cab_form">
 			<table>
 				<tr>
@@ -31,9 +31,19 @@
 					<td id="cab_form_text">Возраст  </td>
 					<td><input type="text" name="age" value="<?php if (isset($_POST['age'])) {echo @($_POST['age']);} //Вывод возраста, если он существует?>"></td>
 				</tr>
+					<tr>
+					<td id="cab_form_text">Пол*</td>
+					<td align="left">
+						<select name="sex" required>
+							<option disabled selected=""></option>
+  							<option value="man">Мужской</option>
+							<option value="voman">Женский</option>
+						</select>
+					</td>
+				</tr>
 			</table>
 		</div>	
 		<input type="submit" name="submit_reg" value="Создать акаунт">
 		<div id="reg_required_field">* обязательные для заполнения поля</div>
-		</form>
-	</div>
+	</form>
+</div>

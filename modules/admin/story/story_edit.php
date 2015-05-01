@@ -44,7 +44,7 @@ if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {
 
 						my_query(
 							"UPDATE `story` SET
-							`image` 		 = '.$name.'
+							`image` 		 = '.$name'
 							WHERE `id` = ".(int)$_GET['id']." 
 
 						");

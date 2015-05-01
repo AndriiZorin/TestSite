@@ -50,6 +50,9 @@ body {
 	text-decoration: none;
 	font-family:  "Comic Sans MS", cursive, sans-serif;
 }
+#cab_button a:hover {
+	color: #310066;
+}
 
 #cab_login {
 	display: inline;
@@ -61,7 +64,9 @@ body {
 	color: #ffffff;
 	text-decoration: none;
 }
-
+#cab_login a:hover {
+	color: #FF00FF;
+}
 .nav {
 	float: right;
 	margin-top: 140px; 
@@ -76,7 +81,7 @@ body {
 	height: 30px;
 	border-radius: 10px;
 	border: 1px solid #e2e2e2;
-	background-color: #e6e6fa;
+	background-color: #E6E6FF;
 
 }
 #nav_button a {
@@ -84,6 +89,10 @@ body {
 	color: #310066;
 	font-family:  "Comic Sans MS", cursive, sans-serif;
 	text-decoration: none;
+}
+
+#nav_button a:hover, #nav_button a:active {
+	color: #FF00FF;
 }
 
 .content {

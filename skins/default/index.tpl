@@ -5,7 +5,6 @@
 	<link rel="stylesheet" href="/skins/<?php echo Core::$VIEW; ?>/css/style.css" media="screen"  />
 	<link rel="stylesheet" href="/skins/<?php echo Core::$VIEW; ?>/css/spec.css" media="screen" />
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
 	<!--Including CSS and JS files-->
 	<?php if(count(Core::$CSS)) { echo implode("\n", Core::$CSS);} ?>
 	<?php if(count(Core::$JS)) { echo implode("\n", Core::$JS);} ?>
@@ -53,6 +52,5 @@
 			 ?>	Андрей Зорин
 		</div>
 	</div>
-
 </body>
 </html>

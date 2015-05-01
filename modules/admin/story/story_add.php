@@ -18,7 +18,7 @@ if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {
 					$matches[1] = mb_strtolower($matches[1]);
 
 					$temp = getimagesize($_FILES['file']['tmp_name']);
-					$name = './upload/story/'.date('Ymd').'img'.rand(10000, 99999).'.jpg';
+					$name = '../upload/story/'.date('Ymd').'img'.rand(10000, 99999).'.jpg';
 
 					if (!in_array($matches[1], $img_ext)) {
 						$img_error = "Неподходит расширение картинки!";
@@ -32,7 +32,7 @@ if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) {
 								`title` 		 = '".mres($_POST['title'])."',
 								`text`	  		 = '".mres($_POST['text'])."',
 								`description`    = '".mres($_POST['description'])."',
-								`image` 		 = '.$name.'
+								`image` 		 = '$name'
 						");
 
 						$_SESSION['info'] = "История успешно добавлена!";
