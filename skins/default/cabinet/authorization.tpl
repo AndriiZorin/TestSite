@@ -1,4 +1,4 @@
-<div class="cabinet">
+<div class="cabinet" >
 
 	<div id="redtext"><?php if (!isset($status) || $status != 'ok') {echo @$errors;  ?></div>
 

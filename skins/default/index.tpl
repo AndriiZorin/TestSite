@@ -3,9 +3,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title><?php echo hsc(Core::$META['title']); ?></title>
 	<link rel="stylesheet" href="/skins/<?php echo Core::$VIEW; ?>/css/style.css" media="screen"  />
-	<link rel="stylesheet" href="/skins/<?php echo Core::$VIEW; ?>/css/spec.css" media="screen" />
+	<link rel="stylesheet" href="/skins/<?php echo Core::$VIEW; ?>/css/other.css" media="screen" />
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<!--Including CSS and JS files-->
+	<script src="/skins/default/js/js_1.js"></script>
 	<?php if(count(Core::$CSS)) { echo implode("\n", Core::$CSS);} ?>
 	<?php if(count(Core::$JS)) { echo implode("\n", Core::$JS);} ?>
 </head>
@@ -28,8 +29,8 @@
 			<div id="header_image"></div>  
 			<div class="nav"> 
 				<div id="nav_button"><a href="/home/home">Главная</a></div>
-				<div id="nav_button"><a href="/story/story">Истории</a></div>
-				<div id="nav_button"><a href="/review/review">Отзывы</a></div>
+				<div id="nav_button"><a href="/home/story">Истории</a></div>
+				<div id="nav_button"><a href="/home/review">Отзывы</a></div>
 			</div>
 		</div> 
 	</div>	
@@ -49,7 +50,7 @@
 				} else {
 					echo "&copy; ".Core::$COPYRIGHT ." - ".date("Y")." ";
 				}
-			 ?>	Андрей Зорин
+			 ?>	<?php echo Core::$MYNAME; ?>
 		</div>
 	</div>
 </body>

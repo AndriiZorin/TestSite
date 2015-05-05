@@ -91,7 +91,7 @@ body {
 	text-decoration: none;
 }
 
-#nav_button a:hover, #nav_button a:active {
+#nav_button a:hover {
 	color: #FF00FF;
 }
 

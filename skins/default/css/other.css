@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+#redtext {
+	color: #ff0000;
+	text-align: center;
+}
+#LoveStory {
+	color: #FF0099;	
+	font-family: Gabriola, Arial, Helvetica, sans-serif;
+	font-size: 28px;
+}
+#infomessage {
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	font-size: 25px;
+}

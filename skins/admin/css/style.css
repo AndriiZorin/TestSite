@@ -40,6 +40,10 @@ body {
 	font-family:  "Comic Sans MS", cursive, sans-serif;
 }
 
+#cab_button a:hover {
+	color: #310066;
+}
+
 #cab_login {
 	display: inline;
 	margin-left: 5px;
@@ -76,7 +80,9 @@ body {
 	font-family:  "Comic Sans MS", cursive, sans-serif;
 	text-decoration: none;
 }
-
+#nav_button a:hover {
+	color: #FF00FF;
+}
 
 .content {
 	width: 100%;

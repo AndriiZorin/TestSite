@@ -2,8 +2,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Admin panel LoveStory</title>
-	<link rel="stylesheet" href="/skins/<?php echo Core::$VIEW; ?>/css/style.css" media="screen"  />
-	<!--Including CSS files-->
+	<link rel="stylesheet" href="/skins/admin/css/style.css" media="screen"  />
+	<!--Including JS-->
+	<script src="/skins/admin/js/js_admin.js"></script>
+	<!--Including CSS-->
 	<?php if(count(Core::$CSS)) { echo implode("\n", Core::$CSS);} ?>
 </head>
 <body>
@@ -18,9 +20,9 @@
 		<div id="header_center"> 
 			<div class="nav"> 
 				<?php  if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 1) { ?>
-					<div id="nav_button"><a href="/admin/story/story">Истории</a></div>
-					<div id="nav_button"><a href="/admin/review/review">Отзывы</a></div>
-					<div id="nav_button"><a href="/admin/member/member">Пользователи</a></div>
+					<div id="nav_button"><a href="/admin/home/story">Истории</a></div>
+					<div id="nav_button"><a href="/admin/home/review">Отзывы</a></div>
+					<div id="nav_button"><a href="/admin/home/member">Пользователи</a></div>
 				<?php } ?>
 			</div>
 		</div> 
@@ -44,7 +46,7 @@
 				} else {
 					echo "&copy; ".Core::$COPYRIGHT ." - ".date("Y")." ";
 				}
-			 ?>	Андрей Зорин
+			 ?>	<?php echo Core::$MYNAME; ?>
 		</div>
 	</div>
 </body>

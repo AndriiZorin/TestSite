@@ -3,6 +3,7 @@ class Core {
 	static $APP = 'modules'; //Controller
 	static $VIEW = 'default'; //View
 	static $COPYRIGHT = 2014; 
+	static $MYNAME = 'Андрей Зорин';
 	static $META = array (
 		'title' => 'LoveStory',
 		'keywords' => 'love, story, romantic',
@@ -16,11 +17,4 @@ class Core {
 	static $DB_PASS = 'admin';
 	static $DB_NAME = 'main';
 	static $DOMAIN = 'http:/Lovestory.com/';
-	/*
-	static $DB_LOCAL = 'localhost';
-	static $DB_LOGIN = 'u756713656_admin';
-	static $DB_PASS = 'bdlovestory';
-	static $DB_NAME = 'u756713656_main';
-	static $DOMAIN = 'http:/Lovestory.zz.mu/';
-	*/
 }	

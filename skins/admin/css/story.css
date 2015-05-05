@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .story {
-	width: 90%;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 30px;
@@ -38,6 +38,11 @@
 	text-decoration: none;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
+
+#story_add a:hover {
+	color: #00ff00;
+}
+
 #story_edit {
 	float: right;
 	text-align: center;
@@ -52,6 +57,10 @@
 	text-decoration: none;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
+
+#story_edit a:hover {
+	color: #00ff00;
+}
 #story_delete {
 	float: right;
 	text-align: center;
@@ -65,6 +74,10 @@
 	font-size: 20px;
 	text-decoration: none;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#story_delete a:hover {
+	color: #00ffff;
 }
 
 /*  Для файлов story_add.tpl и story_edit.tpl */
@@ -85,4 +98,25 @@
 	margin-left: auto;
 	padding: 20px;
 	width: 90%;
+}
+
+/* Paginator */
+
+.paginator {
+	text-align: center;
+	padding: 3px;
+	margin: 3px;
+}
+.paginator a {
+	font-weight: bold;
+	color: #aa00ff;
+	text-decoration: none;
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #aa00ff;
+}
+
+.paginator a:hover, .paginator a:active {
+	border: 1px solid #AAAAff;
+	color: #AAAAff;
 }
